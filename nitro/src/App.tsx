@@ -1,24 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+      Northstars Nitro
+      </div>
+
+    <div>
+    Toronto's brattiest and speediest flag football traveling team is heading to Austin GayBowl 2024.
+    </div>
+    <div className='flex justify-center items-center'>
+      Roster
+    <div className='flex justify-center items-center h-screen bg-gray-100'>
+      <Card/>
+    </div>
+    </div>
+    <div>
+      © Andres Garcia Rodriguez
+    </div>
     </div>
   );
 }
