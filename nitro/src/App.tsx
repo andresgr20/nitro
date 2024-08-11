@@ -6,15 +6,17 @@ import Card from './components/Card';
 function App() {
   return (
     <div>
-      <div>
+      <div className='flex justify-center items-center w-screen text-6xl'>
       Northstars Nitro
       </div>
 
-    <div>
-    Toronto's brattiest and speediest flag football traveling team is heading to Austin GayBowl 2024.
+    <div className='flex justify-center items-center w-screen'>
+    Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.
     </div>
-    Roster
-    <div className='flex justify-center items-center h-screen bg-gray-100'>
+    <div className='flex justify-center items-center w-screen text-3xl'>    
+      Roster
+    </div>
+    <div className='flex justify-center items-center h-screen'>
       <Card/>
     </div>
     <div>

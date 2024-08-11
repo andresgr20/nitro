@@ -19,13 +19,14 @@ export default function Card(){
           </div>
           <div className="absolute w-full h-full flex flex-row items-center justify-around bg-green-500 backface-hidden rotate-y-180 rounded-lg p-4">
             <div className="text-white">
-              <h2 className="text-2xl">Back Title</h2>
-              <p className="mt-2">This is the back of the card.</p>
+              <h2 className="text-2xl">Scott Fowlie</h2>
+              <img src={sample} alt="Bit art of player"/>
+              <p>Tiny but mighty</p>
+              <p className="mt-2">Likes:</p>
+              <p className="mt-2">Dislikes:</p>
+              <p>Socials</p>
             </div>
             <div>
-              <button className="bg-white text-green-500 py-2 px-4 rounded">
-                Socials
-              </button>
             </div>
           </div>
         </div>
