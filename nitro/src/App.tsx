@@ -5,7 +5,7 @@ import Card from './components/Card';
 
 function App() {
   return (
-    <div>
+    <div className='bg-nitro h-screen'>
       <div className='flex justify-center items-center w-screen text-6xl'>
       Northstars Nitro
       </div>
@@ -16,7 +16,7 @@ function App() {
     <div className='flex justify-center items-center w-screen text-3xl'>    
       Roster
     </div>
-    <div className='flex justify-center items-center h-screen'>
+    <div className='flex justify-center items-center'>
       <Card/>
     </div>
     <div>

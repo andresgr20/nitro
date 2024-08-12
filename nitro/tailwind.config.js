@@ -4,9 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: {
-          DEFAULT: "#BADA55",
-        },
+        nitro: "#8ACE00",
+        silver: "C0C0C0",
       },
     },
   },
