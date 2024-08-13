@@ -1,7 +1,6 @@
 import { useState} from 'react';
 import '../css/Card.css';
 import sample from '../sample-gif.gif';
-import players from '../data/players.json';
 
 interface Player{
     id: number;
@@ -15,13 +14,17 @@ interface Player{
     instagram: string;
 }
 
-export default function Card(){
+interface CardProps{
+    player: Player
+}
+
+export default function Card({player} : CardProps){
     const [isFlipped,setIsFlipped] = useState(false);
-    const player: Player = players[0];
 
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
     }
+    console.log(player);
 
     return (
         <div className="perspective-1000" onClick={handleFlip}>

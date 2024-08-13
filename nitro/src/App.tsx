@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Card from './components/Card';
+import Deck from './components/Deck';
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
     <div className='flex justify-center items-center w-screen text-3xl'>    
       Roster
     </div>
-    <div className='flex justify-center items-center'>
-      <Card/>
+    <div className=''>
+      <Deck/>
     </div>
     <div>
       © Andres Garcia Rodriguez

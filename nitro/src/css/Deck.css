@@ -1,0 +1,42 @@
+.deck-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .deck-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+  }
+  
+  .deck-cards {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  
+  .deck-card.active {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    z-index: 5;
+  }
+  
+  .deck-card.left {
+    transform: translateX(-120%) scale(0.7);
+  }
+  
+  .deck-card.right {
+    transform: translateX(120%) scale(0.7);
+  }
+  

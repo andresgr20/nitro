@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Card from "./Card";
 import CardInfo from '../data/players.json';
+import '../css/Deck.css';
+
 export default function Deck(){
     const [currentCard,setCurrentCard] = useState(0);
 
@@ -14,6 +16,17 @@ export default function Deck(){
 
     return (
         <div className="deck-container">
+            <button onClick={handlePrev} className='deck-button'>Back</button>
+            <div className="deck-cards">
+                {CardInfo.map((card,id) => 
+                <div key={card.id}
+                    className={`deck-card ${id == currentCard ? 'active' : ''} ${id < currentCard ?  'left' : ''} ${id > currentCard ? 'right' : ''}`}
+                    >
+                        <Card player={card} />
+                </div>
+                )}
+            </div>
+            <button onClick={handleNext} className='deck-button'>Next</button>
         </div>
     )
 }
