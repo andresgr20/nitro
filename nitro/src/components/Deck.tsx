@@ -5,6 +5,7 @@ import '../css/Deck.css';
 
 export default function Deck(){
     const [currentCard,setCurrentCard] = useState(0);
+    const [active,setActive] = useState(true)
 
     const handlePrev = () => {
         setCurrentCard( (prev) => (prev > 0 ? prev - 1 : CardInfo.length - 1))
@@ -19,11 +20,13 @@ export default function Deck(){
             <button onClick={handlePrev} className='deck-button'>Back</button>
             <div className="deck-cards">
                 {CardInfo.map((card,id) => 
+                Math.abs(id - currentCard) <= 1 && (
                 <div key={card.id}
                     className={`deck-card ${id == currentCard ? 'active' : ''} ${id < currentCard ?  'left' : ''} ${id > currentCard ? 'right' : ''}`}
                     >
-                        <Card player={card} />
+                        <Card player={card} active={active} />
                 </div>
+                )
                 )}
             </div>
             <button onClick={handleNext} className='deck-button'>Next</button>
