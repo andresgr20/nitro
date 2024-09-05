@@ -10,6 +10,12 @@ const description = [
   "Polaris"
 ]
 
+const title = [
+  'Nitro',
+  "Tundra",
+  "Polaris"
+]
+
 // TODO: get the logos of each team and amke background dynamic 
 // TODO:  fix centering of card
 // TODO: Add QR jump 
@@ -19,7 +25,7 @@ function App() {
   return (
     <div className='bg-nitro min-h-screen flex flex-col'>
       <div className='flex justify-center items-center w-screen text-6xl md:text-5xl sm:text-4xl  mt-4'>
-      Northstars Nitro
+      Northstars {title[selectedTeam]}
       </div>
     <div className='flex justify-center items-center w-screen text-lg sm:text-base my-2 text-center px-4'>
       {description[selectedTeam]}
