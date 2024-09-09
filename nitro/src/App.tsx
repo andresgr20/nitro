@@ -17,32 +17,33 @@ const title = [
 ]
 
 // TODO: get the logos of each team and amke background dynamic 
-// TODO:  fix centering of card
+// TODO: fix centering of card
 // TODO: Add QR jump 
 // TODO: make colour cohesive
 function App() {
   const [selectedTeam,setSelectedTeam] = useState(0);
   return (
-    <div className='bg-nitro min-h-screen flex flex-col'>
-      <div className='flex justify-center items-center w-screen text-6xl md:text-5xl sm:text-4xl  mt-4'>
-      Northstars {title[selectedTeam]}
-      </div>
-    <div className='flex justify-center items-center w-screen text-lg sm:text-base my-2 text-center px-4'>
-      {description[selectedTeam]}
+  <div className='bg-nitro min-h-screen flex flex-col items-center'>
+    <div className='text-6xl md:text-5xl sm:text-4xl mt-4'>
+    Northstars {title[selectedTeam]}
     </div>
-    <div className='flex justify-center items-center w-screen'>
-      <TeamSelectorButton selectedTeam={selectedTeam} setSelectedTeam={setSelectedTeam}/>
+    <div className='text-lg sm:text-base my-2 text-center px-4'>
+    {description[selectedTeam]}
     </div>
-    <div className='flex justify-center items-center w-screen text-3xl sm:text-2xl my-4'>    
-      Roster
-    </div>
-    <div className='flex justify-center items-center w-screen my-8'>
-      <Deck/>
-    </div>
-    <div className='flex justify-center items-center w-screen my-8'>
-      © Andres Garcia Rodriguez
-    </div>
-    </div>
+    <TeamSelectorButton 
+    selectedTeam={selectedTeam} 
+    setSelectedTeam={setSelectedTeam} 
+    />
+  <div className='text-3xl sm:text-2xl my-4'>
+    Roster
+  </div>
+  <div className='w-screen my-8'>
+    <Deck/>
+  </div>
+  <div className='my-8'>
+    © Andres Garcia Rodriguez
+  </div>
+</div>
   );
 }
 
