@@ -3,28 +3,32 @@ import './App.css';
 import Card from './components/Card';
 import Deck from './components/Deck';
 import TeamSelectorButton from './components/TeamSelectorButton';
+import polaris from './images/polaris-logo.png';
+import nitro from './images/nitro-logo.png';
+import tundra from './images/tundra-logo.png';
 
 const description = [
   "Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.",
   "Tundra",
   "Polaris"
-]
+];
 
 const title = [
   'Nitro',
   "Tundra",
   "Polaris"
-]
+];
 
-// TODO: get the logos of each team and amke background dynamic 
 // TODO: fix centering of card
 // TODO: Add QR jump 
 // TODO: make colour cohesive
 function App() {
   const [selectedTeam,setSelectedTeam] = useState(0);
+  const logo = selectedTeam == 0 ? nitro : selectedTeam == 1 ? tundra : polaris;
   return (
   <div className='bg-nitro min-h-screen flex flex-col items-center'>
     <div className='text-6xl md:text-5xl sm:text-4xl mt-4'>
+    {/* <img src={logo} /> */}
     Northstars {title[selectedTeam]}
     </div>
     <div className='text-lg sm:text-base my-2 text-center px-4'>

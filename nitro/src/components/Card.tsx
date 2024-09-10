@@ -54,8 +54,6 @@ export default function Card({player,active} : CardProps){
               <p className="mt-2">Dislikes: {player.dislikes}</p>
               <p>Socials</p>
                 </div>
-
-
             </div>
             <div>
             </div>
