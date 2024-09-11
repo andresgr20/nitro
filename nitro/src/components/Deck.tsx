@@ -7,10 +7,12 @@ import { ArrowCircleRightOutlined, ArrowCircleLeftOutlined } from "@mui/icons-ma
 import { IconButton } from "@mui/material";
 
 interface DeckProps{
-    team: number
+    team: number,
+    showCollectedOnly: boolean,
+    collectedCards: Set<string>
 }
 
-export default function Deck({team}: DeckProps){
+export default function Deck({team, showCollectedOnly,collectedCards}: DeckProps){
     const [currentCard,setCurrentCard] = useState(0);
     const rosterInfo = [NitroInfo,TundraInfo,PolarisInfo]
 
@@ -21,7 +23,7 @@ export default function Deck({team}: DeckProps){
     const handleNext = () => {
         setCurrentCard((prev) => (prev < rosterInfo[team].length - 1 ? prev + 1: 0))
     }
-    
+
     return (
         <div className="w-full mx-auto">
         <div className="relative flex justify-center w-full overflow-hidden h-[400px]">
@@ -48,7 +50,7 @@ export default function Deck({team}: DeckProps){
           ${id < currentCard - 1 ? 'translate-x-[-500px] scale-50 opacity-25 z-0' : ''}
           ${id > currentCard + 1 ? 'translate-x-[500px] scale-50 opacity-25 z-0' : ''}`}
       >
-        <Card player={card} active={currentCard === id} />
+        <Card player={card} active={currentCard === id} collected/>
       </div>
     );
   })}

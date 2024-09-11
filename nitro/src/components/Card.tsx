@@ -19,9 +19,10 @@ interface Player{
 interface CardProps{
     player: Player
     active: boolean
+    collected: boolean
 }
 
-export default function Card({player,active} : CardProps){
+export default function Card({player,active, collected} : CardProps){
     const [isFlipped,setIsFlipped] = useState(false);
 
     const handleFlip = () => {
@@ -32,15 +33,17 @@ export default function Card({player,active} : CardProps){
         setIsFlipped(!isFlipped);
     }
 
+    const acquired = () => false ? 'border-gold' : 'border-white';
+
     return (
         <div className="perspective-1000" onClick={handleFlip}>
         <div className={`relative w-72 h-96 transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
-          <div className="absolute w-full h-full flex flex-col items-center justify-center bg-black backface-hidden rounded-lg p-4 border-4 border-silver shadow-md">
+          <div className={`absolute w-full h-full flex flex-col items-center justify-center backface-hidden bg-black  rounded-lg p-4 border-8 shadow-md ${acquired()}`}>
             <h2 className="text-white text-2xl">No. {player.number}</h2>
             <img src={sample} alt="Bit art of player" className='w-full h-full image-rendering-pixelated image-rendering-crisp'/>
             <p className="text-white mt-2 text-sm sm:text-base">{player.name}</p>
           </div>
-          <div className="absolute w-full h-full grid grid-cols-2 bg-black backface-hidden rotate-y-180 rounded-lg p-4 border-4 border-silver shadow-md">
+          <div className={`absolute w-full h-full grid grid-cols-2 backface-hidden rotate-y-180 rounded-lg bg-black p-4 border-8 shadow-md ${acquired()}`}>
             <div className="text-white gap-4'">
                 <div className='col-span-2 text-center'>
                 <h2 className="text-xl font-bold">{player.name}</h2>

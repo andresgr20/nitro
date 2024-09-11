@@ -17,7 +17,8 @@ module.exports = {
       },
       colors: {
         nitro: "#8ACE00",
-        silver: "C0C0C0",
+        silver: "#C0C0C0",
+        gold: "#EAA11B",
       },
       imageRendering: {
         pixelated: {
