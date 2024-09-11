@@ -1,6 +1,8 @@
 import { useState} from 'react';
 import '../css/Card.css';
 import sample from '../images/scottiev1.gif';
+import { Instagram } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
 
 interface Player{
     id: number;
@@ -53,6 +55,12 @@ export default function Card({player,active} : CardProps){
                 <p className="mt-2">Likes: {player.likes}</p>
               <p className="mt-2">Dislikes: {player.dislikes}</p>
               <p>Socials</p>
+              <div>
+                <IconButton  component="a" target="_blank" href={player.instagram} color="inherit">
+                  <Instagram/>
+                </IconButton>
+
+              </div>
                 </div>
             </div>
             <div>

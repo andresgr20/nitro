@@ -19,7 +19,6 @@ const title = [
   "Polaris"
 ];
 
-// TODO: fix centering of card
 // TODO: Add QR jump 
 // TODO: make colour cohesive
 function App() {
@@ -41,10 +40,10 @@ function App() {
   <div className='text-3xl sm:text-2xl my-4'>
     Roster
   </div>
-  <div className='w-screen my-8'>
-    <Deck/>
+  <div className='w-screen flex justify-center'>
+    <Deck team={selectedTeam}/>
   </div>
-  <div className='my-8'>
+  <div className='fixed bottom-0 w-full text-center py-2'>
     © Andres Garcia Rodriguez
   </div>
 </div>
