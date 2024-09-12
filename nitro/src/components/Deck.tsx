@@ -8,11 +8,10 @@ import { IconButton } from "@mui/material";
 
 interface DeckProps{
     team: number,
-    showCollectedOnly: boolean,
     collectedCards: Set<string>
 }
 
-export default function Deck({team, showCollectedOnly,collectedCards}: DeckProps){
+export default function Deck({team, collectedCards}: DeckProps){
     const [currentCard,setCurrentCard] = useState(0);
     const rosterInfo = [NitroInfo,TundraInfo,PolarisInfo]
 
@@ -50,7 +49,7 @@ export default function Deck({team, showCollectedOnly,collectedCards}: DeckProps
           ${id < currentCard - 1 ? 'translate-x-[-500px] scale-50 opacity-25 z-0' : ''}
           ${id > currentCard + 1 ? 'translate-x-[500px] scale-50 opacity-25 z-0' : ''}`}
       >
-        <Card player={card} active={currentCard === id} collected/>
+        <Card player={card} active={currentCard === id} collected={collectedCards.has(card.number)}/>
       </div>
     );
   })}

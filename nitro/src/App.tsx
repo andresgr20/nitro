@@ -23,7 +23,6 @@ const title = [
 // TODO: Add QR jump 
 function App() {
   const [selectedTeam,setSelectedTeam] = useState(0);
-  const [checked, setChecked] = useState(false);
   const [collectedCards,setCollectedCards] = useState<Set<string>>(new Set());
 
   useEffect(() => {
@@ -45,7 +44,6 @@ function App() {
     window.history.replaceState({}, document.title, window.location.pathname);
   }, []);
   
-  const handleCheck = () => setChecked(!checked);
 
   const logo = selectedTeam == 0 ? nitro : selectedTeam == 1 ? tundra : polaris;
   return (
@@ -61,16 +59,9 @@ function App() {
     selectedTeam={selectedTeam} 
     setSelectedTeam={setSelectedTeam} 
     />
-    <FormGroup>
-      <FormControlLabel control={<Switch checked={checked} onChange={handleCheck}/>} label="Collected cards only?"/>
-    </FormGroup>
-  <div className='text-3xl sm:text-2xl my-4'>
-    Roster
-  </div>
   <div className='w-screen flex justify-center'>
     <Deck 
     team={selectedTeam}
-    showCollectedOnly={checked}
     collectedCards={collectedCards}
     />
   </div>
