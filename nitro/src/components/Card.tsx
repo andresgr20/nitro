@@ -43,27 +43,31 @@ export default function Card({player,active, collected} : CardProps){
             <img src={sample} alt="Bit art of player" className='w-full h-full image-rendering-pixelated image-rendering-crisp'/>
             <p className="text-white mt-2 text-sm sm:text-base">{player.name}</p>
           </div>
-          <div className={`absolute w-full h-full grid grid-cols-2 backface-hidden rotate-y-180 rounded-lg bg-black p-4 border-8 shadow-md ${acquired()}`}>
-            <div className="text-white gap-4'">
-                <div className='col-span-2 text-center'>
+          <div className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-lg bg-black p-4 border-8 shadow-md ${acquired()}`}>
+            <div className="text-white">
+                <div className='text-center mb-4'>
                 <h2 className="text-xl font-bold">{player.name}</h2>
-                </div>
-                <div className='flex justify-center items-center'>
                 <p>{player.quote}</p>
                 </div>
-                <div className='flex justify-center itemrs-center'>
-                <img src={sample} alt="Image of player" className='w-full max-w-xs'/>
-                </div>
-                <div className="col-span-2 text-left">
-                <p className="mt-2">Likes: {player.likes}</p>
-              <p className="mt-2">Dislikes: {player.dislikes}</p>
-              <p>Socials</p>
+                <div className='grid grid-cols-2 gap-4'>
+                  <div>
+                  <div className="text-left">
+                    <p className="mt-2">Likes: {player.likes}</p>
+                    <p className="mt-2">Dislikes: {player.dislikes}</p>
+                  </div>
+                  <div>
+                  <p>Socials</p>
               <div>
-                <IconButton  component="a" target="_blank" href={player.instagram} color="inherit">
+                <IconButton  component="a" target="_blank" href={`https://www.instagram.com/${player.instagram}`} color="inherit">
                   <Instagram/>
                 </IconButton>
 
               </div>
+                  </div>
+                </div>
+                <div className='flex justify-center itemr-center'>
+                <img src={sample} alt="Image of player" className='w-full max-w-xs'/>
+                </div>
                 </div>
             </div>
             <div>
