@@ -74,7 +74,7 @@ function App() {
     collectedCards={collectedCards}
     />
   </div>
-  <div className='fixed bottom-0 w-full text-center py-2'>
+  <div className='md:fixed bottom-0 w-full text-center py-2'>
     © Andres Garcia Rodriguez
   </div>
 </div>

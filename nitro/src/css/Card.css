@@ -13,8 +13,3 @@
   .backface-hidden {
     backface-visibility: hidden;
   }
-
-  .card-wrapper {
-    border: 2px solid transparent;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  }

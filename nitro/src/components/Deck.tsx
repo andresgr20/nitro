@@ -56,12 +56,12 @@ export default function Deck({team, showCollectedOnly,collectedCards}: DeckProps
   })}
   </div>
         <div className='relative flex justify-center mt-4 items-center' >
-            <IconButton onClick={handlePrev} aria-label="back">
-            <ArrowCircleLeftOutlined/>
+            <IconButton onClick={handlePrev} aria-label="back" color='inherit'>
+            <ArrowCircleLeftOutlined fontSize="large"/>
             </IconButton>
-            <p className="text-xl font-bold"> {rosterInfo[team][currentCard].name}</p>
-            <IconButton onClick={handleNext} aria-label="next">
-            <ArrowCircleRightOutlined/>
+            <p className="text-xl font-bold inline-block w-48 text-center"> {rosterInfo[team][currentCard].name}</p>
+            <IconButton onClick={handleNext} aria-label="next" color='inherit'>
+            <ArrowCircleRightOutlined fontSize="large"/>
             </IconButton>
         </div>
 
