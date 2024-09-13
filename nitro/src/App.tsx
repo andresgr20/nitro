@@ -45,6 +45,8 @@ function App() {
   }, []);
   
 
+  console.log(collectedCards);
+
   const logo = selectedTeam == 0 ? nitro : selectedTeam == 1 ? tundra : polaris;
   return (
   <div className='bg-nitro min-h-screen flex flex-col items-center'>
@@ -59,7 +61,7 @@ function App() {
     selectedTeam={selectedTeam} 
     setSelectedTeam={setSelectedTeam} 
     />
-  <div className='w-screen flex justify-center'>
+  <div className='w-screen flex justify-center mt-10'>
     <Deck 
     team={selectedTeam}
     collectedCards={collectedCards}

@@ -3,6 +3,7 @@ import '../css/Card.css';
 import sample from '../images/scottiev1.gif';
 import { Instagram } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
+import nitro from '../images/nitro-white.png';
 
 interface Player{
     id: number;
@@ -33,16 +34,34 @@ export default function Card({player,active, collected} : CardProps){
         setIsFlipped(!isFlipped);
     }
 
-    const acquired = () => false ? 'border-gold' : 'border-white';
+    const acquired = () => collected ? 'border-gold' : 'border-white';
+
+    // V1 of the card
+    const v2 = true;
+
+    const v1 =(<div className={`absolute w-full h-full flex flex-col items-center justify-center backface-hidden bg-black  rounded-lg p-4 border-8 shadow-md ${acquired()}`}>
+    <h2 className="text-white text-2xl">No. {player.number}</h2>
+    <img src={sample} alt="Bit art of player" className='w-full h-full image-rendering-pixelated image-rendering-crisp'/>
+    <p className="text-white mt-2 text-sm sm:text-base">{player.name}</p>
+  </div>);
+
 
     return (
         <div className="perspective-1000" onClick={handleFlip}>
         <div className={`relative w-72 h-96 transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
-          <div className={`absolute w-full h-full flex flex-col items-center justify-center backface-hidden bg-black  rounded-lg p-4 border-8 shadow-md ${acquired()}`}>
-            <h2 className="text-white text-2xl">No. {player.number}</h2>
-            <img src={sample} alt="Bit art of player" className='w-full h-full image-rendering-pixelated image-rendering-crisp'/>
-            <p className="text-white mt-2 text-sm sm:text-base">{player.name}</p>
+          {/* Front of the card */}
+          <div className={`absolute w-full h-full flex flex-col justify-center backface-hidden bg-black rounded-lg border-8 shadow-md ${acquired()}`}>
+            <div className='w-full h-[calc(100%-64px)] max-h-[calc(100%-64px)]'>
+              <img src={`images/${player.pic}`} alt="Image of the player" className='w-full h-full object-cover max-h-full'/>
+            </div>
+            <div className='flex justify-between items-center w-full mt-2 px-2'>
+              <p className="ml-2 text-white mt-2 text-sm sm:text-base text-left font-bold text-center ">{player.name} #{player.number} </p>
+              <img src={nitro} alt="logo of the team"  className='w-18 h-14'/>
+            </div>
+            
           </div>
+
+          {/* Back of the card */}
           <div className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-lg bg-black p-4 border-8 shadow-md ${acquired()}`}>
             <div className="text-white">
                 <div className='text-center mb-4'>
@@ -66,7 +85,7 @@ export default function Card({player,active, collected} : CardProps){
                   </div>
                 </div>
                 <div className='flex justify-center itemr-center'>
-                <img src={sample} alt="Image of player" className='w-full max-w-xs'/>
+                <img src={`images/${player.pic}`} alt="Image of player" className='w-full max-w-xs'/>
                 </div>
                 </div>
             </div>
