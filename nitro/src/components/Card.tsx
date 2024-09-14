@@ -66,26 +66,25 @@ export default function Card({player,active, collected} : CardProps){
             <div className="text-white">
                 <div className='text-center mb-4'>
                 <h2 className="text-xl font-bold">{player.name}</h2>
-                <p>{player.quote}</p>
+                <p className='italics'>{player.quote}</p>
                 </div>
-                <div className='grid grid-cols-2 gap-4'>
-                  <div>
+                  <div className='gap-4'>
                   <div className="text-left">
-                    <p className="mt-2">Likes: {player.likes}</p>
-                    <p className="mt-2">Dislikes: {player.dislikes}</p>
+                  <p className="mt-2 font-bold">Position</p>
+                  <p className=''>Defence</p>
+                    <p className="mt-2 font-bold">Likes</p>
+                    <p className=''>{player.likes}</p>
+                    <p className="mt-2 font-bold">Dislikes</p>
+                    <p>{player.dislikes}</p>
                   </div>
                   <div>
-                  <p>Socials</p>
+                  <p className='font-bold mt-2'>Socials</p>
               <div>
                 <IconButton  component="a" target="_blank" href={`https://www.instagram.com/${player.instagram}`} color="inherit">
                   <Instagram/>
                 </IconButton>
 
-              </div>
                   </div>
-                </div>
-                <div className='flex justify-center itemr-center'>
-                <img src={`images/${player.pic}`} alt="Image of player" className='w-full max-w-xs'/>
                 </div>
                 </div>
             </div>
