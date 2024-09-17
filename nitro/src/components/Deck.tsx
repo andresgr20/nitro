@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import NitroInfo from '../data/nitro.json'
 import TundraInfo from '../data/tundra.json'
@@ -8,19 +8,35 @@ import { IconButton } from "@mui/material";
 
 interface DeckProps{
     team: number,
-    collectedCards: Set<string>
-    
+    collectedCards: Set<string>,
+    scannedCard?: string | null,
+    setScannedCard?: React.Dispatch<React.SetStateAction<string|null>>
 }
 
-export default function Deck({team, collectedCards}: DeckProps){
+export default function Deck({team, collectedCards, scannedCard, setScannedCard}: DeckProps){
     const [currentCard,setCurrentCard] = useState(0);
     const rosterInfo = [NitroInfo,TundraInfo,PolarisInfo]
 
+    useEffect(() => {
+      if(scannedCard !== null){
+        const index = rosterInfo[team].findIndex((card:any) => card.number === scannedCard);
+        if(index !== -1){
+          setCurrentCard(index);
+        }
+      }
+    }, [team,scannedCard,rosterInfo]);
+
     const handlePrev = () => {
+      if(scannedCard && setScannedCard){
+        setScannedCard(null);
+      }
         setCurrentCard( (prev) => (prev > 0 ? prev - 1 : rosterInfo[team].length - 1))
     }
 
     const handleNext = () => {
+      if(scannedCard && setScannedCard){
+        setScannedCard(null);
+      }
         setCurrentCard((prev) => (prev < rosterInfo[team].length - 1 ? prev + 1: 0))
     }
 

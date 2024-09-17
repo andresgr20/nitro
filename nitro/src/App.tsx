@@ -6,7 +6,6 @@ import TeamSelectorButton from './components/TeamSelectorButton';
 import polaris from './images/polaris-logo.png';
 import nitro from './images/nitro-logo.png';
 import tundra from './images/tundra-logo.png';
-import { FormControl, FormControlLabel, FormGroup, Switch } from '@mui/material';
 
 const description = [
   "Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.",
@@ -20,11 +19,10 @@ const title = [
   "Polaris"
 ];
 
-// TODO: Add QR jump 
 function App() {
   const [selectedTeam,setSelectedTeam] = useState(0);
   const [collectedCards,setCollectedCards] = useState<Set<string>>(new Set());
-  const [scannedCard,setScannedCard] = useState("");
+  const [scannedCard,setScannedCard] = useState<string | null>(null);
 
   useEffect(() => {
     let storedCards = localStorage.getItem('collectedCards');
@@ -49,20 +47,22 @@ function App() {
   const logo = selectedTeam == 0 ? nitro : selectedTeam == 1 ? tundra : polaris;
   return (
   <div className='bg-nitro min-h-screen flex flex-col items-center'>
-    <div className='text-6xl md:text-5xl sm:text-4xl mt-4'>
+    <div className='text-6xl md:text-5xl sm:text-4xl mt-4 font-bold uppercase py-4'>
     Northstars {title[selectedTeam]}
     </div>
-    <div className='text-lg sm:text-base my-2 text-center px-4'>
-    {description[selectedTeam]}
+    <div className='sm:text-base my-2 text-center px-4'>
+    <p className='text-xl'>{description[selectedTeam]} </p>
     </div>
-    <TeamSelectorButton 
+    {/* <TeamSelectorButton 
     selectedTeam={selectedTeam} 
     setSelectedTeam={setSelectedTeam} 
-    />
+    /> */}
   <div className='w-screen flex justify-center mt-10'>
     <Deck 
     team={selectedTeam}
     collectedCards={collectedCards}
+    scannedCard={scannedCard}
+    setScannedCard={setScannedCard}
     />
   </div>
   <div className='md:fixed bottom-0 w-full text-center py-2'>

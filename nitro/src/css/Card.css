@@ -13,3 +13,10 @@
   .backface-hidden {
     backface-visibility: hidden;
   }
+
+  .back-card{
+    background-image: url('../images/background.jpeg');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
