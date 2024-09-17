@@ -54,16 +54,16 @@ export default function Card({player,active, collected} : CardProps){
 
           {/* Back of the card */}
           <div className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-lg back-card p-4 border-8 shadow-md ${acquired()}`}>
-            <div className="text-white">
-            <div className='flex items-center w-full pb-2'>
-  <div className='flex flex-col items-center flex-grow'>
-    <h2 className="text-xl font-bold">{player.name}</h2>
-    <p className='text-sm'>{player.quote}</p>
-  </div>
-  <img src={nitro} alt="logo of the team" className='w-18 h-14' />
-</div>
-                  <div className='gap-4 bg-indigo-100 bg-opacity-50 p-1 rounded-lg'>
-                  <div className="text-left">
+            <div className="text-white h-full flex flex-col justify-between">
+            <div className='relative w-full'>
+              <img src={nitro} alt="logo of the team" className=' absolute w-18 h-14 object-cover' />
+              <div className='absolute w-full flex flex-col items-center justify-center'>
+                <h2 className="text-xl font-bold text-center">{player.name}</h2>
+                <p className='text-sm text-center'>{player.quote}</p>
+                </div>
+                </div>
+                  <div className='bg-indigo-100 bg-opacity-30 p-1 rounded-lg flex flex-col justify-between mt-16'>
+                  <div className="text-center">
                   <p className="font-bold">Position</p>
                   <p className='text-xs'>Defence</p>
                     <p className="mt-2 font-bold">Likes</p>
@@ -72,15 +72,21 @@ export default function Card({player,active, collected} : CardProps){
                     <p className='text-xs'>{player.dislikes}</p>
                   </div>
                   <div>
-                  <p className='font-bold mt-2'>Socials</p>
-              <div>
+
+              {/* <div className='flex justify-center pb-5'>
                 <IconButton  component="a" target="_blank" href={`https://www.instagram.com/${player.instagram}`} color="inherit">
-                  <Instagram/>
+                  <Instagram fontSize='large'/>
+                </IconButton>
+
+                  </div> */}
+                </div>
+                </div>
+                <div className='flex justify-center pb-5'>
+                <IconButton  component="a" target="_blank" href={`https://www.instagram.com/${player.instagram}`} color="inherit">
+                  <Instagram fontSize='large'/>
                 </IconButton>
 
                   </div>
-                </div>
-                </div>
             </div>
             <div>
             </div>

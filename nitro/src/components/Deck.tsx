@@ -60,7 +60,7 @@ export default function Deck({team, collectedCards, scannedCard, setScannedCard}
       <div
         key={card.id}
         className={`absolute transition-transform duration-500 ease-in-out transform
-          ${id === currentCard ? 'scale-100 z-10 opacity-100' : ''}
+          ${id === currentCard ? 'scale-100 z-10 opacity-100 shadow-2xl' : ''}
           ${id === currentCard - 1 || (currentCard === 0 && id === rosterInfo[team].length - 1) ? 'translate-x-[-250px] scale-75 opacity-50 z-0' : ''}
           ${id === currentCard + 1 || (currentCard === rosterInfo[team].length - 1 && id === 0) ? 'translate-x-[250px] scale-75 opacity-50 z-0' : ''}
           ${id < currentCard - 1 ? 'translate-x-[-500px] scale-50 opacity-25 z-0' : ''}
