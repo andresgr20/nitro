@@ -9,6 +9,7 @@ import { IconButton } from "@mui/material";
 interface DeckProps{
     team: number,
     collectedCards: Set<string>
+    
 }
 
 export default function Deck({team, collectedCards}: DeckProps){

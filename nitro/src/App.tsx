@@ -24,6 +24,7 @@ const title = [
 function App() {
   const [selectedTeam,setSelectedTeam] = useState(0);
   const [collectedCards,setCollectedCards] = useState<Set<string>>(new Set());
+  const [scannedCard,setScannedCard] = useState("");
 
   useEffect(() => {
     let storedCards = localStorage.getItem('collectedCards');
@@ -39,19 +40,16 @@ function App() {
         localStorage.setItem('collectedCards', JSON.stringify(Array.from(updatedCards)));
         setCollectedCards(updatedCards);
       }
+      setScannedCard(cardId);
     }
 
     window.history.replaceState({}, document.title, window.location.pathname);
   }, []);
-  
-
-  console.log(collectedCards);
 
   const logo = selectedTeam == 0 ? nitro : selectedTeam == 1 ? tundra : polaris;
   return (
   <div className='bg-nitro min-h-screen flex flex-col items-center'>
     <div className='text-6xl md:text-5xl sm:text-4xl mt-4'>
-    {/* <img src={logo} /> */}
     Northstars {title[selectedTeam]}
     </div>
     <div className='text-lg sm:text-base my-2 text-center px-4'>

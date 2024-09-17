@@ -52,7 +52,7 @@ export default function Card({player,active, collected} : CardProps){
           {/* Front of the card */}
           <div className={`absolute w-full h-full flex flex-col justify-center backface-hidden bg-black rounded-lg border-8 shadow-md ${acquired()}`}>
             <div className='w-full h-[calc(100%-64px)] max-h-[calc(100%-64px)]'>
-              <img src={`images/${player.pic}`} alt="Image of the player" className='w-full h-full object-cover max-h-full'/>
+              <img src={collected ? `images/${player.gif}`: `images/${player.pic}`} alt="Image of the player" className='w-full h-full object-cover max-h-full'/>
             </div>
             <div className='flex justify-between items-center w-full mt-2 px-2'>
               <p className="ml-2 text-white mt-2 text-sm sm:text-base text-left font-bold text-center ">{player.name} #{player.number} </p>
