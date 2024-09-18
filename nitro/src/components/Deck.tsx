@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import Card from "./Card";
 import NitroInfo from '../data/nitro.json'
 import TundraInfo from '../data/tundra.json'
@@ -40,9 +41,19 @@ export default function Deck({team, collectedCards, scannedCard, setScannedCard}
         setCurrentCard((prev) => (prev < rosterInfo[team].length - 1 ? prev + 1: 0))
     }
 
+    const swipeHandlers = useSwipeable({
+      onSwipedLeft: () => handlePrev(),
+      onSwipedRight: () => handleNext(),
+      preventScrollOnSwipe: true,
+      trackMouse: true,
+    });
+
     return (
         <div className="w-full mx-auto">
-        <div className="relative flex justify-center w-full overflow-hidden h-[400px]">
+        <div 
+        {...swipeHandlers}
+        className="relative flex justify-center w-full overflow-hidden h-[400px]"
+        >
         {rosterInfo[team].map((card, id) => {
 
     const isVisible = 

@@ -14,6 +14,7 @@ interface Player{
     gif: string;
     pic: string;
     instagram: string;
+    position: string;
 }
 
 interface CardProps{
@@ -64,7 +65,7 @@ export default function Card({player,active, collected} : CardProps){
                   <div className='bg-indigo-100 bg-opacity-30 p-1 rounded-lg flex flex-col justify-between mt-16'>
                   <div className="text-center">
                   <p className="font-bold">Position</p>
-                  <p className='text-xs'>Defence</p>
+                  <p className='text-xs'>{player.position}</p>
                     <p className="mt-2 font-bold">Likes</p>
                     <p className='text-xs'>{player.likes}</p>
                     <p className="mt-2 font-bold">Dislikes</p>
