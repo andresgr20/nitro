@@ -6,6 +6,7 @@ import TeamSelectorButton from './components/TeamSelectorButton';
 import polaris from './images/polaris-logo.png';
 import nitro from './images/nitro-logo.png';
 import tundra from './images/tundra-logo.png';
+import { initGA, logPageView } from './analytics';
 
 const description = [
   "Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.",
@@ -25,6 +26,8 @@ function App() {
   const [scannedCard,setScannedCard] = useState<string | null>(null);
 
   useEffect(() => {
+    initGA('G-7Z534Q6P03');
+    logPageView();
     let storedCards = localStorage.getItem('collectedCards');
     storedCards = storedCards ? JSON.parse(storedCards) : [];
 
