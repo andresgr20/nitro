@@ -13,7 +13,7 @@ interface Player{
     dislikes: string;
     gif: string;
     pic: string;
-    instagram: string;
+    instagram: string | null;
     position: string;
 }
 
@@ -72,21 +72,22 @@ export default function Card({player,active, collected} : CardProps){
                     <p className='text-xs'>{player.dislikes}</p>
                   </div>
                   <div>
-
-              {/* <div className='flex justify-center pb-5'>
-                <IconButton  component="a" target="_blank" href={`https://www.instagram.com/${player.instagram}`} color="inherit">
-                  <Instagram fontSize='large'/>
-                </IconButton>
-
-                  </div> */}
                 </div>
                 </div>
-                <div className='flex justify-center pb-5'>
-                <IconButton  component="a" target="_blank" href={`https://www.instagram.com/${player.instagram}`} color="inherit">
-                  <Instagram fontSize='large'/>
-                </IconButton>
-
-                  </div>
+                {/* {
+                player.instagram && 
+                    <div className='flex justify-center pb-5'>
+                    <IconButton  component="a" target="_blank" href={`https://www.instagram.com/${player.instagram}`} color="inherit">
+                      <Instagram fontSize='large'/>
+                    </IconButton>
+    
+                      </div>} */}
+                      <div className='flex justify-center pb-5'>
+                    <IconButton  component="a" target="_blank" href={`https://www.instagram.com/${player.instagram}`} color="inherit">
+                      <Instagram fontSize='large'/>
+                    </IconButton>
+    
+                      </div>
             </div>
             <div>
             </div>
