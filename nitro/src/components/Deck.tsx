@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
-import Card from "./Card";
-import NitroInfo from "../data/nitro.json";
-import TundraInfo from "../data/tundra.json";
-import PolarisInfo from "../data/polaris.json";
+import Card, { Player } from "./Card";
+import players from "../data/players.json";
 import {
   ArrowCircleRightOutlined,
   ArrowCircleLeftOutlined,
@@ -11,7 +9,7 @@ import {
 import { IconButton } from "@mui/material";
 
 interface DeckProps {
-  team: number;
+  team: string;
   collectedCards: Set<string>;
   scannedCard?: string | null;
   setScannedCard?: React.Dispatch<React.SetStateAction<string | null>>;
@@ -24,35 +22,29 @@ export default function Deck({
   setScannedCard,
 }: DeckProps) {
   const [currentCard, setCurrentCard] = useState(0);
-  const rosterInfo = [NitroInfo, TundraInfo, PolarisInfo];
+  const roster = players.filter((player: Player) => player.team === team);
 
   useEffect(() => {
-    if (scannedCard !== null) {
-      const index = rosterInfo[team].findIndex(
-        (card: any) => card.id === scannedCard
-      );
+    if (scannedCard) {
+      const index = roster.findIndex((card: Player) => card.id === scannedCard);
       if (index !== -1) {
         setCurrentCard(index);
       }
     }
-  }, [team, scannedCard, rosterInfo]);
+  }, [team, scannedCard, roster]);
 
   const handlePrev = () => {
     if (scannedCard && setScannedCard) {
       setScannedCard(null);
     }
-    setCurrentCard((prev) =>
-      prev > 0 ? prev - 1 : rosterInfo[team].length - 1
-    );
+    setCurrentCard((prev) => (prev > 0 ? prev - 1 : roster.length - 1));
   };
 
   const handleNext = () => {
     if (scannedCard && setScannedCard) {
       setScannedCard(null);
     }
-    setCurrentCard((prev) =>
-      prev < rosterInfo[team].length - 1 ? prev + 1 : 0
-    );
+    setCurrentCard((prev) => (prev < roster.length - 1 ? prev + 1 : 0));
   };
 
   const swipeHandlers = useSwipeable({
@@ -62,24 +54,19 @@ export default function Deck({
     trackMouse: true,
   });
 
-  // 0 - 19, 20 - 38, 39 - rest
   return (
     <div className="w-full mx-auto">
       <div
         {...swipeHandlers}
         className="relative flex justify-center w-full overflow-hidden h-[400px]"
       >
-        {rosterInfo[team].map((card, id) => {
+        {roster.map((card, id) => {
           const isVisible =
             id === currentCard ||
-            id === (currentCard + 1) % rosterInfo[team].length ||
-            id === (currentCard + 2) % rosterInfo[team].length ||
-            id ===
-              (currentCard - 1 + rosterInfo[team].length) %
-                rosterInfo[team].length ||
-            id ===
-              (currentCard - 2 + rosterInfo[team].length) %
-                rosterInfo[team].length;
+            id === (currentCard + 1) % roster.length ||
+            id === (currentCard + 2) % roster.length ||
+            id === (currentCard - 1 + roster.length) % roster.length ||
+            id === (currentCard - 2 + roster.length) % roster.length;
 
           if (!isVisible) {
             return null;
@@ -92,13 +79,13 @@ export default function Deck({
           ${id === currentCard ? "scale-100 z-10 opacity-100 shadow-2xl" : ""}
           ${
             id === currentCard - 1 ||
-            (currentCard === 0 && id === rosterInfo[team].length - 1)
+            (currentCard === 0 && id === roster.length - 1)
               ? "translate-x-[-250px] scale-75 opacity-50 z-0"
               : ""
           }
           ${
             id === currentCard + 1 ||
-            (currentCard === rosterInfo[team].length - 1 && id === 0)
+            (currentCard === roster.length - 1 && id === 0)
               ? "translate-x-[250px] scale-75 opacity-50 z-0"
               : ""
           }
@@ -127,8 +114,7 @@ export default function Deck({
           <ArrowCircleLeftOutlined fontSize="large" />
         </IconButton>
         <p className="text-xl font-bold inline-block w-48 text-center">
-          {" "}
-          {rosterInfo[team][currentCard].name}
+          {roster[currentCard].name}
         </p>
         <IconButton onClick={handleNext} aria-label="next" color="inherit">
           <ArrowCircleRightOutlined fontSize="large" />

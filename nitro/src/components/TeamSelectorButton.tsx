@@ -1,8 +1,8 @@
 import { Button, ButtonGroup } from "@mui/material";
 
 interface TeamSelectorButtonProps {
-  selectedTeam: number;
-  setSelectedTeam: (arg: number) => void;
+  selectedTeam: string;
+  setSelectedTeam: (team: string) => void;
 }
 
 export default function TeamSelectorButton({
@@ -12,20 +12,20 @@ export default function TeamSelectorButton({
   return (
     <ButtonGroup variant="contained">
       <Button
-        onClick={() => setSelectedTeam(0)}
-        color={selectedTeam === 0 ? "primary" : "secondary"}
+        onClick={() => setSelectedTeam("nitro")}
+        color={selectedTeam === "nitro" ? "primary" : "secondary"}
       >
         Nitro
       </Button>
       <Button
-        onClick={() => setSelectedTeam(1)}
-        color={selectedTeam === 1 ? "primary" : "secondary"}
+        onClick={() => setSelectedTeam("tundra")}
+        color={selectedTeam === "tundra" ? "primary" : "secondary"}
       >
         Tundra
       </Button>
       <Button
-        onClick={() => setSelectedTeam(2)}
-        color={selectedTeam === 2 ? "primary" : "secondary"}
+        onClick={() => setSelectedTeam("polaris")}
+        color={selectedTeam === "polaris" ? "primary" : "secondary"}
       >
         Polaris
       </Button>

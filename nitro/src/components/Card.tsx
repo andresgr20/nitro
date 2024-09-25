@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "../css/Card.css";
-import { Instagram } from "@mui/icons-material";
+import { Instagram, GitHub } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import nitro from "../images/nitro-white.png";
-import tundra from "../images/tundra-logo.png";
-import polaris from "../images/polaris-logo.png";
+import tundra from "../images/tundra-white.png";
+import polaris from "../images/polaris-white.png";
 
-interface Player {
+export interface Player {
   id: number | string;
   number: string;
   name: string;
@@ -18,7 +18,12 @@ interface Player {
   instagram?: string | null;
   looking: string;
   position: string;
-  team?: string;
+  team: string;
+  secret?: Secret[];
+}
+interface Secret {
+  secret: string;
+  description: string;
 }
 
 interface CardProps {
@@ -41,7 +46,7 @@ export default function Card({ player, active, collected }: CardProps) {
   const team = () =>
     player.team === "nitro"
       ? nitro
-      : player.team == "tundra"
+      : player.team === "tundra"
       ? tundra
       : polaris;
 

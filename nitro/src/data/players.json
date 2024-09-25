@@ -45,15 +45,19 @@
     "id": 3,
     "name": "Andres Garcia",
     "number": "20",
-    "quote": "perra",
-    "dislikes": "njdd",
-    "likes": "",
+    "quote": "Find me in a concert",
+    "dislikes": "Interviews and the spotlight",
+    "likes": "Concerts, dance covers, coding, and videogames 🎫",
     "gif": "trent-pic.jpeg",
-    "pic": "trent-pic.jpeg",
-    "instagram": "bala",
-    "position": "GOAT Commissioner",
+    "pic": "andres-pic.jpeg",
+    "instagram": "andresgr20",
+    "position": "👻",
     "looking": "a job",
-    "team": "nitro"
+    "team": "nitro",
+    "secret": [
+      { "secret": "spotify", "description": "link" },
+      { "secret": "github", "description": "link" }
+    ]
   },
   {
     "id": 4,
@@ -151,7 +155,8 @@
     "instagram": "colossal.eloi",
     "position": "Top",
     "looking": "👀",
-    "team": "nitro"
+    "team": "nitro",
+    "secret": [{ "secret": "instagram", "description": "your.gay.trace" }]
   },
   {
     "id": 11,
@@ -193,7 +198,8 @@
     "instagram": "jon_zaid",
     "position": "Down",
     "looking": "Friends, hard plays, sex, a sugar, a job?",
-    "team": "nitro"
+    "team": "nitro",
+    "secret": [{ "secret": "text", "description": "I'm gay" }]
   },
   {
     "id": 14,
@@ -263,7 +269,13 @@
     "instagram": "twentdoctor",
     "position": "GOAT Commissioner",
     "looking": "science",
-    "team": "nitro"
+    "team": "nitro",
+    "secret": [
+      {
+        "secret": "spotify",
+        "description": "https://open.spotify.com/playlist/4imOePxCUTkAsXqrHtQvGF?si=AsmlB1rsRoqhBu5-oP0qEA&pi=cBsMjLNgQhmHK"
+      }
+    ]
   },
   {
     "id": 19,

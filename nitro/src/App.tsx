@@ -3,19 +3,33 @@ import Deck from "./components/Deck";
 import TeamSelectorButton from "./components/TeamSelectorButton";
 import { initGA, logPageView } from "./analytics";
 
-const description = [
-  "Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.",
-  "Beep beep, well if it ain't the frostiest bitches of the True North! Tundra's comin' down to Austin to bring a blizzard and a ball!",
-  "Polaris",
-];
-
-const title = ["Nitro", "Tundra", "Polaris"];
 const teamSelectorEnabled = false;
 
-// make the background differen per team
+type Team = {
+  title: string;
+  description: string;
+};
+const teams: Record<string, Team> = {
+  nitro: {
+    title: "Nitro",
+    description:
+      "Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.",
+  },
+  tundra: {
+    title: "tundra",
+    description:
+      "Beep beep, well if it ain't the frostiest bitches of the True North! Tundra's comin' down to Austin to bring a blizzard and a ball!",
+  },
+  polaris: {
+    title: "polaris",
+    description:
+      "Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.",
+  },
+};
+
 // show the collected cards
 function App() {
-  const [selectedTeam, setSelectedTeam] = useState(0);
+  const [selectedTeam, setSelectedTeam] = useState<keyof typeof teams>("nitro");
   const [collectedCards, setCollectedCards] = useState<Set<string>>(new Set());
   const [scannedCard, setScannedCard] = useState<string | null>(null);
 
@@ -47,10 +61,10 @@ function App() {
   return (
     <div className="bg-nitro min-h-screen flex flex-col items-center">
       <div className="text-6xl md:text-5xl sm:text-4xl mt-4 font-bold uppercase py-4">
-        Northstars {title[selectedTeam]}
+        Northstars {teams[selectedTeam].title}
       </div>
       <div className="sm:text-base my-2 text-center px-4">
-        <p className="text-xl">{description[selectedTeam]} </p>
+        <p className="text-xl">{teams[selectedTeam].description} </p>
       </div>
 
       {teamSelectorEnabled && (
