@@ -20,27 +20,7 @@ module.exports = {
         silver: "#C0C0C0",
         gold: "#EAA11B",
       },
-      imageRendering: {
-        pixelated: {
-          "image-rendering": "pixelated",
-        },
-        "crisp-edges": {
-          "image-rendering": "crisp-edges",
-        },
-      },
     },
   },
-  plugins: [
-    function ({ addUtilities }) {
-      const newUtilities = {
-        ".image-rendering-pixelated": {
-          "image-rendering": "pixelated",
-        },
-        ".image-rendering-crisp": {
-          "image-rendering": "crisp-edges",
-        },
-      };
-      addUtilities(newUtilities, ["responsive", "hover"]);
-    },
-  ],
+  plugins: [],
 };
