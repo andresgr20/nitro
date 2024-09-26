@@ -48,8 +48,8 @@ export default function Deck({
   };
 
   const swipeHandlers = useSwipeable({
-    onSwipedLeft: () => handlePrev(),
-    onSwipedRight: () => handleNext(),
+    onSwipedLeft: () => handleNext(),
+    onSwipedRight: () => handlePrev(),
     preventScrollOnSwipe: true,
     trackMouse: true,
   });
