@@ -1,13 +1,17 @@
 import { useState } from "react";
 import "../css/Card.css";
-import { Instagram, GitHub } from "@mui/icons-material";
-import { IconButton } from "@mui/material";
 import nitro from "../images/nitro-white.png";
 import tundra from "../images/tundra-white.png";
 import polaris from "../images/polaris-white.png";
+import SocialButton from "./SocialButton";
+
+interface Secret {
+  secret: string;
+  description: string;
+}
 
 export interface Player {
-  id: number | string;
+  id: number;
   number: string;
   name: string;
   quote: string;
@@ -15,15 +19,11 @@ export interface Player {
   dislikes: string;
   gif: string;
   pic: string;
-  instagram?: string | null;
+  instagram?: string;
   looking: string;
   position: string;
   team: string;
   secret?: Secret[];
-}
-interface Secret {
-  secret: string;
-  description: string;
 }
 
 interface CardProps {
@@ -56,6 +56,10 @@ export default function Card({ player, active, collected }: CardProps) {
     { label: "Likes", value: player.likes },
     { label: "Dislikes", value: player.dislikes },
   ];
+
+  if (collected && player.secret && player.secret[0].secret == "text") {
+    backData.push({ label: "Secret", value: player.secret[0].description });
+  }
 
   return (
     <div className="perspective-1000" onClick={handleFlip}>
@@ -97,24 +101,39 @@ export default function Card({ player, active, collected }: CardProps) {
               <div className="text-center">
                 {backData.map((item, index) => (
                   <div key={index} className={`${index > 0 ? "mt-2" : ""} `}>
-                    <p className="font-bold">{item.label}</p>
+                    <p
+                      className={`font-bold ${
+                        item.label === "Secret" ? "text-gold italic" : ""
+                      }`}
+                    >
+                      {item.label}
+                    </p>
                     <p className="text-xs">{item.value}</p>
                   </div>
                 ))}
               </div>
-              <div></div>
             </div>
             <div className="flex justify-center pb-5">
               {player.instagram && (
-                <IconButton
-                  component="a"
-                  target="_blank"
-                  href={`https://www.instagram.com/${player.instagram}`}
-                  color="inherit"
-                >
-                  <Instagram fontSize="large" />
-                </IconButton>
+                <SocialButton
+                  social="instagram"
+                  description={player.instagram}
+                />
               )}
+              {collected &&
+                player.secret &&
+                player.secret.map((secret, index) => {
+                  const isSocialSecret = secret.secret !== "text";
+
+                  return isSocialSecret ? (
+                    <SocialButton
+                      key={index}
+                      social={secret.secret}
+                      description={secret.description}
+                      secretUnlocked={collected}
+                    />
+                  ) : null;
+                })}
             </div>
           </div>
           <div></div>

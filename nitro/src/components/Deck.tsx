@@ -26,8 +26,12 @@ export default function Deck({
 
   useEffect(() => {
     if (scannedCard) {
-      const index = roster.findIndex((card: Player) => card.id === scannedCard);
+      const index = roster.findIndex(
+        (card: Player) => card.number === scannedCard
+      );
+      console.log(index);
       if (index !== -1) {
+        console.log(index);
         setCurrentCard(index);
       }
     }

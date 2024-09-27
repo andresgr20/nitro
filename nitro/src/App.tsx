@@ -58,6 +58,11 @@ function App() {
     window.history.replaceState({}, document.title, window.location.pathname);
   }, []);
 
+  const collectedText =
+    collectedCards.size < 20
+      ? `You have collected ${collectedCards.size} / 20 ${teams[selectedTeam].title} Trading Cards`
+      : "🏆 Congratulations on collecting all the Nitro players! A representative will be in touch to welcome you into the exclusive Nitro cult. Let's ride!🏎️";
+
   return (
     <div className="bg-nitro min-h-screen flex flex-col items-center">
       <div className="text-6xl md:text-5xl sm:text-4xl mt-4 font-bold uppercase py-4">
@@ -73,6 +78,9 @@ function App() {
           setSelectedTeam={setSelectedTeam}
         />
       )}
+      <div className="sm:text-base my-2 text-center px-4">
+        <p className="text-xl font-semibold">{collectedText}</p>
+      </div>
       <div className="w-screen flex justify-center mt-10">
         <Deck
           team={selectedTeam}

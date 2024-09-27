@@ -8,7 +8,7 @@
     "likes": "gay lit, thai food, jrpgs",
     "gif": "trent-pic.jpeg",
     "pic": "scotty-pic.jpeg",
-    "instagram": "sc0yy",
+    "instagram": "https://www.instagram.com/sc0yy",
     "position": "I'm a team player",
     "looking": "new friends, new \"friends,\" and fun experiences",
     "team": "nitro"
@@ -22,7 +22,7 @@
     "likes": "Real Estate, Gaming, Sci-Fi/Fantasy Series",
     "gif": "trent-pic.jpeg",
     "pic": "gavin-pic.jpeg",
-    "instagram": "gavinfong",
+    "instagram": "https://www.instagram.com/gavinfong",
     "position": "DPS",
     "looking": "Self Actualization",
     "team": "nitro"
@@ -36,7 +36,7 @@
     "likes": "Waffle House",
     "gif": "trent-pic.jpeg",
     "pic": "diego-pic.jpeg",
-    "instagram": "dsantesteban",
+    "instagram": "https://www.instagram.com/dsantesteban",
     "position": "Whatever is needed",
     "looking": "Good BBQ, good beer, cowboy boots",
     "team": "nitro"
@@ -50,13 +50,13 @@
     "likes": "Concerts, dance covers, coding, and videogames 🎫",
     "gif": "trent-pic.jpeg",
     "pic": "andres-pic.jpeg",
-    "instagram": "andresgr20",
+    "instagram": "https://www.instagram.com/andresgr20",
     "position": "👻",
     "looking": "a job",
     "team": "nitro",
     "secret": [
       { "secret": "spotify", "description": "link" },
-      { "secret": "github", "description": "link" }
+      { "secret": "github", "description": "https://github.com/andresgr20" }
     ]
   },
   {
@@ -81,7 +81,7 @@
     "likes": "good boys, good food, good drinks, good times",
     "gif": "trent-pic.jpeg",
     "pic": "andy-pic.jpeg",
-    "instagram": "andy.d.bee",
+    "instagram": "https://www.instagram.com/andy.d.bee",
     "position": "HB/WR",
     "looking": "Hoping to have fun and make friends",
     "team": "nitro"
@@ -95,7 +95,7 @@
     "likes": "Dogs and Pizza",
     "gif": "trent-pic.jpeg",
     "pic": "andrew-pic.jpeg",
-    "instagram": "andrewshadlock",
+    "instagram": "https://www.instagram.com/andrewshadlock",
     "position": "On the field: TE / Off the field: Top",
     "looking": "Fun, friends and good food",
     "team": "nitro"
@@ -123,7 +123,7 @@
     "likes": "Biking, nice boys and nature.",
     "gif": "trent-pic.jpeg",
     "pic": "dallas-pic.jpeg",
-    "instagram": "dallasgerhardt",
+    "instagram": "https://www.instagram.com/dallasgerhardt",
     "position": "Running back",
     "looking": "A fun time with fun people.",
     "team": "nitro"
@@ -150,11 +150,16 @@
     "likes": "Takis",
     "gif": "trent-pic.jpeg",
     "pic": "eloi-pic.jpeg",
-    "instagram": "colossal.eloi",
+    "instagram": "https://www.instagram.com/colossal.eloi",
     "position": "Top",
     "looking": "👀",
     "team": "nitro",
-    "secret": [{ "secret": "instagram", "description": "your.gay.trace" }]
+    "secret": [
+      {
+        "secret": "instagram",
+        "description": "https://www.instagram.com/your.gay.trace"
+      }
+    ]
   },
   {
     "id": 11,
@@ -168,7 +173,12 @@
     "position": "WR",
     "looking": "BBQ, friends, touchdowns",
     "team": "nitro",
-    "secret": [{ "secret": "instagram", "description": "jacobpleet" }]
+    "secret": [
+      {
+        "secret": "instagram",
+        "description": "https://www.instagram.com/jacobpleet"
+      }
+    ]
   },
   {
     "id": 12,
@@ -193,7 +203,7 @@
     "likes": "Balls, tight ends, and wide receivers",
     "gif": "trent-pic.jpeg",
     "pic": "jon-pic.jpeg",
-    "instagram": "jon_zaid",
+    "instagram": "https://www.instagram.com/jon_zaid",
     "position": "Down",
     "looking": "Friends, hard plays, sex, a sugar, a job?",
     "team": "nitro",
@@ -221,7 +231,7 @@
     "likes": "Pizza, gay camping and bears",
     "gif": "trent-pic.jpeg",
     "pic": "babe-pic.jpeg",
-    "instagram": "bandiitbabe",
+    "instagram": "https://www.instagram.com/bandiitbabe",
     "position": "Bottom vers \"corner and receiver\"",
     "looking": "Fun and friends",
     "team": "nitro"
@@ -235,7 +245,7 @@
     "likes": "Sleeping, cats, cooking.",
     "gif": "trent-pic.jpeg",
     "pic": "mitchell-pic.jpeg",
-    "instagram": "burkem88",
+    "instagram": "https://www.instagram.com/burkem88",
     "position": "Center",
     "looking": "Friends.",
     "team": "nitro"
@@ -262,7 +272,7 @@
     "likes": "Pokémon, Coca-cola, irony and serial commas",
     "gif": "trent-acquired.gif",
     "pic": "trent-pic.jpeg",
-    "instagram": "twentdoctor",
+    "instagram": "https://www.instagram.com/twentdoctor",
     "position": "lazy",
     "looking": "science",
     "team": "nitro",
@@ -282,7 +292,7 @@
     "likes": "Big legs and football",
     "gif": "trent-pic.jpeg",
     "pic": "colin-pic.jpeg",
-    "instagram": "chlphd",
+    "instagram": "https://www.instagram.com/chlphd",
     "position": "QB",
     "looking": "no injuries",
     "team": "nitro"
@@ -296,7 +306,7 @@
     "likes": "Winning games",
     "gif": "player-20-pic.gif",
     "pic": "player-20-pic.jpeg",
-    "instagram": "player_20",
+    "instagram": "https://www.instagram.com/player_20",
     "position": "K",
     "looking": "stay healthy",
     "team": "tundra"
@@ -310,7 +320,7 @@
     "likes": "Tough games",
     "gif": "player-21-pic.gif",
     "pic": "player-21-pic.jpeg",
-    "instagram": "player_21",
+    "instagram": "https://www.instagram.com/player_21",
     "position": "QB",
     "looking": "stay healthy",
     "team": "tundra"
@@ -324,7 +334,7 @@
     "likes": "Tactical play",
     "gif": "player-22-pic.gif",
     "pic": "player-22-pic.jpeg",
-    "instagram": "player_22",
+    "instagram": "https://www.instagram.com/player_22",
     "position": "K",
     "looking": "stay healthy",
     "team": "tundra"
@@ -338,7 +348,7 @@
     "likes": "Team spirit",
     "gif": "player-23-pic.gif",
     "pic": "player-23-pic.jpeg",
-    "instagram": "player_23",
+    "instagram": "https://www.instagram.com/player_23",
     "position": "QB",
     "looking": "stay healthy",
     "team": "tundra"
@@ -352,7 +362,7 @@
     "likes": "Speed training",
     "gif": "player-24-pic.gif",
     "pic": "player-24-pic.jpeg",
-    "instagram": "player_24",
+    "instagram": "https://www.instagram.com/player_24",
     "position": "LB",
     "looking": "stay healthy",
     "team": "tundra"
@@ -366,7 +376,7 @@
     "likes": "Winning games",
     "gif": "player-25-pic.gif",
     "pic": "player-25-pic.jpeg",
-    "instagram": "player_25",
+    "instagram": "https://www.instagram.com/player_25",
     "position": "RB",
     "looking": "stay healthy",
     "team": "tundra"
@@ -380,7 +390,7 @@
     "likes": "Team spirit",
     "gif": "player-26-pic.gif",
     "pic": "player-26-pic.jpeg",
-    "instagram": "player_26",
+    "instagram": "https://www.instagram.com/player_26",
     "position": "RB",
     "looking": "stay healthy",
     "team": "tundra"
@@ -394,7 +404,7 @@
     "likes": "Speed training",
     "gif": "player-27-pic.gif",
     "pic": "player-27-pic.jpeg",
-    "instagram": "player_27",
+    "instagram": "https://www.instagram.com/player_27",
     "position": "WR",
     "looking": "stay healthy",
     "team": "tundra"
@@ -408,7 +418,7 @@
     "likes": "Team spirit",
     "gif": "player-28-pic.gif",
     "pic": "player-28-pic.jpeg",
-    "instagram": "player_28",
+    "instagram": "https://www.instagram.com/player_28",
     "position": "WR",
     "looking": "stay healthy",
     "team": "tundra"
@@ -422,7 +432,7 @@
     "likes": "Speed training",
     "gif": "player-29-pic.gif",
     "pic": "player-29-pic.jpeg",
-    "instagram": "player_29",
+    "instagram": "https://www.instagram.com/player_29",
     "position": "K",
     "looking": "stay healthy",
     "team": "tundra"
