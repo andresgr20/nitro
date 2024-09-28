@@ -19,6 +19,8 @@ module.exports = {
         nitro: "#8ACE00",
         silver: "#C0C0C0",
         gold: "#EAA11B",
+        tundra: "#037b96",
+        polaris: "#814EB2",
       },
     },
   },

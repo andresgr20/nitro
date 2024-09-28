@@ -13,6 +13,7 @@ interface DeckProps {
   collectedCards: Set<string>;
   scannedCard?: string | null;
   setScannedCard?: React.Dispatch<React.SetStateAction<string | null>>;
+  showOnlyMissing: boolean;
 }
 
 export default function Deck({
@@ -20,18 +21,21 @@ export default function Deck({
   collectedCards,
   scannedCard,
   setScannedCard,
+  showOnlyMissing,
 }: DeckProps) {
   const [currentCard, setCurrentCard] = useState(0);
-  const roster = players.filter((player: Player) => player.team === team);
+  let roster = players.filter((player: Player) => player.team === team);
+  roster =
+    showOnlyMissing && collectedCards.size > 0 && collectedCards.size < 20
+      ? roster.filter((card: Player) => !collectedCards.has(card.number))
+      : roster;
 
   useEffect(() => {
     if (scannedCard) {
       const index = roster.findIndex(
         (card: Player) => card.number === scannedCard
       );
-      console.log(index);
       if (index !== -1) {
-        console.log(index);
         setCurrentCard(index);
       }
     }
