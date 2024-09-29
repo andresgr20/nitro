@@ -96,16 +96,19 @@ function App() {
           </div>
           {collectedCards.size > 0 && (
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
-              <label className="flex items-center space-x-2 cursor-pointer">
-                <span onClick={() => setShowMissingOnly(!showMissingOnly)}>
-                  Show only missing cards
-                </span>
-                <Checkbox
-                  checked={showMissingOnly}
-                  onChange={() => setShowMissingOnly(!showMissingOnly)}
-                  aria-label="Show only missing cards"
-                />
-              </label>
+              {collectedCards.size < 20 && (
+                <label className="flex items-center space-x-2 cursor-pointer">
+                  <span onClick={() => setShowMissingOnly(!showMissingOnly)}>
+                    Show only missing cards
+                  </span>
+                  <Checkbox
+                    checked={showMissingOnly}
+                    onChange={() => setShowMissingOnly(!showMissingOnly)}
+                    aria-label="Show only missing cards"
+                  />
+                </label>
+              )}
+
               <label className="flex items-center space-x-2 cursor-pointer">
                 <span
                   onClick={() => setShowAlternateImages(!showAlternateImages)}
