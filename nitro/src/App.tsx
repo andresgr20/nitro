@@ -13,19 +13,19 @@ type Team = {
 };
 const teams: Record<string, Team> = {
   nitro: {
-    title: "nitro",
+    title: "Nitro",
     description:
       "Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.",
     background: "bg-nitro",
   },
   tundra: {
-    title: "tundra",
+    title: "Tundra",
     description:
       "Beep beep, well if it ain't the frostiest bitches of the True North! Tundra's comin' down to Austin to bring a blizzard and a ball!",
     background: "bg-tundra",
   },
   polaris: {
-    title: "polaris",
+    title: "Polaris",
     description:
       "Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.",
     background: "bg-polaris",
@@ -65,7 +65,9 @@ function App() {
   }, []);
 
   const collectedText =
-    collectedCards.size < 20
+    collectedCards.size === 0
+      ? `No ${teams[selectedTeam].title} Trading Cards have been collected`
+      : collectedCards.size < 20
       ? `You have collected ${collectedCards.size} / 20 ${teams[selectedTeam].title} Trading Cards`
       : "🏆 Congratulations on collecting all the Nitro players! A representative will be in touch to welcome you into the exclusive Nitro cult. Let's ride!🏎️";
 
@@ -90,26 +92,32 @@ function App() {
           <div className="sm:text-base my-2 text-center px-4">
             <p className="text-xl font-semibold">{collectedText}</p>
           </div>
-          <label className="flex items-center space-x-2 cursor-pointer">
-            <span onClick={() => setShowMissingOnly(!showMissingOnly)}>
-              Show only missing cards
-            </span>
-            <Checkbox
-              checked={showMissingOnly}
-              onChange={() => setShowMissingOnly(!showMissingOnly)}
-              aria-label="Show only missing cards"
-            />
-          </label>
-          <label className="flex items-center space-x-2 cursor-pointer">
-            <span onClick={() => setShowAlternateImages(!showAlternateImages)}>
-              Show alternate images
-            </span>
-            <Checkbox
-              checked={showAlternateImages}
-              onChange={() => setShowAlternateImages(!showAlternateImages)}
-              aria-label="Show alternate images"
-            />
-          </label>
+          {collectedCards.size > 0 && (
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+              <label className="flex items-center space-x-2 cursor-pointer">
+                <span onClick={() => setShowMissingOnly(!showMissingOnly)}>
+                  Show only missing cards
+                </span>
+                <Checkbox
+                  checked={showMissingOnly}
+                  onChange={() => setShowMissingOnly(!showMissingOnly)}
+                  aria-label="Show only missing cards"
+                />
+              </label>
+              <label className="flex items-center space-x-2 cursor-pointer">
+                <span
+                  onClick={() => setShowAlternateImages(!showAlternateImages)}
+                >
+                  Show alternate images
+                </span>
+                <Checkbox
+                  checked={showAlternateImages}
+                  onChange={() => setShowAlternateImages(!showAlternateImages)}
+                  aria-label="Show alternate images"
+                />
+              </label>
+            </div>
+          )}
         </div>
       ) : null}
       <div className="w-screen flex justify-center mt-10">
