@@ -3,6 +3,7 @@ import Deck from "./components/Deck";
 import TeamSelectorButton from "./components/TeamSelectorButton";
 import { initGA, logPageView } from "./analytics";
 import { Checkbox } from "@mui/material";
+import players from "data/players.json";
 
 const teamSelectorEnabled = false;
 
@@ -48,7 +49,8 @@ function App() {
     setCollectedCards(new Set(storedCards));
     const urlParams = new URLSearchParams(window.location.search);
     const cardId = urlParams.get("cardId");
-    if (cardId) {
+    const cardExists = players.some((player) => player.id === cardId);
+    if (cardId && cardExists) {
       const updatedCards = new Set(storedCards);
       if (!updatedCards.has(cardId)) {
         updatedCards.add(cardId);

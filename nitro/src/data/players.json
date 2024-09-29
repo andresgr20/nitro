@@ -48,14 +48,17 @@
     "quote": "Find me in a concert",
     "dislikes": "Interviews and the spotlight",
     "likes": "Concerts, dance covers, coding, and videogames 🎫",
-    "gif": "trent-pic.jpeg",
+    "gif": "trent-acquired.gif",
     "pic": "andres-pic.jpeg",
     "instagram": "https://www.instagram.com/andresgr20",
     "position": "👻",
     "looking": "a job",
     "team": "nitro",
     "secret": [
-      { "secret": "spotify", "description": "link" },
+      {
+        "secret": "spotify",
+        "description": "https://open.spotify.com/playlist/3A75r2ur7meclQDIkU4Udt?si=b726aae5f50f44b3"
+      },
       { "secret": "github", "description": "https://github.com/andresgr20" }
     ]
   },
