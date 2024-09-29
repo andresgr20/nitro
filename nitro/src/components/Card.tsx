@@ -11,7 +11,7 @@ interface Secret {
 }
 
 export interface Player {
-  id: number;
+  id: string;
   number: string;
   name: string;
   quote: string;
@@ -30,9 +30,15 @@ interface CardProps {
   player: Player;
   active: boolean;
   collected: boolean;
+  showAlternateImage: boolean;
 }
 
-export default function Card({ player, active, collected }: CardProps) {
+export default function Card({
+  player,
+  active,
+  collected,
+  showAlternateImage,
+}: CardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -40,6 +46,8 @@ export default function Card({ player, active, collected }: CardProps) {
       setIsFlipped(!isFlipped);
     }
   };
+
+  console.log(collected);
 
   const acquired = () => (collected ? "border-gold" : "border-white");
 
@@ -73,7 +81,11 @@ export default function Card({ player, active, collected }: CardProps) {
         >
           <div className="w-full h-[calc(100%-72px)] max-h-[calc(100%-72px)]">
             <img
-              src={collected ? `images/${player.gif}` : `images/${player.pic}`}
+              src={
+                collected && showAlternateImage
+                  ? `images/${player.gif}`
+                  : `images/${player.pic}`
+              }
               alt="Player"
               className="w-full h-full object-cover max-h-full"
             />

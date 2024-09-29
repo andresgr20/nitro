@@ -4,7 +4,7 @@ import TeamSelectorButton from "./components/TeamSelectorButton";
 import { initGA, logPageView } from "./analytics";
 import { Checkbox } from "@mui/material";
 
-const teamSelectorEnabled = true;
+const teamSelectorEnabled = false;
 
 type Team = {
   title: string;
@@ -37,6 +37,7 @@ function App() {
   const [collectedCards, setCollectedCards] = useState<Set<string>>(new Set());
   const [scannedCard, setScannedCard] = useState<string | null>(null);
   const [showMissingOnly, setShowMissingOnly] = useState<boolean>(false);
+  const [showAlternateImages, setShowAlternateImages] = useState<boolean>(true);
 
   useEffect(() => {
     initGA("G-7Z534Q6P03");
@@ -99,6 +100,16 @@ function App() {
               aria-label="Show only missing cards"
             />
           </label>
+          <label className="flex items-center space-x-2 cursor-pointer">
+            <span onClick={() => setShowAlternateImages(!showAlternateImages)}>
+              Show alternate images
+            </span>
+            <Checkbox
+              checked={showAlternateImages}
+              onChange={() => setShowAlternateImages(!showAlternateImages)}
+              aria-label="Show alternate images"
+            />
+          </label>
         </div>
       ) : null}
       <div className="w-screen flex justify-center mt-10">
@@ -108,6 +119,7 @@ function App() {
           scannedCard={scannedCard}
           setScannedCard={setScannedCard}
           showOnlyMissing={showMissingOnly}
+          showAlternateImages={showAlternateImages}
         />
       </div>
       <div className="md:fixed bottom-0 w-full text-center py-2">

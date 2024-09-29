@@ -14,6 +14,7 @@ interface DeckProps {
   scannedCard?: string | null;
   setScannedCard?: React.Dispatch<React.SetStateAction<string | null>>;
   showOnlyMissing: boolean;
+  showAlternateImages: boolean;
 }
 
 export default function Deck({
@@ -22,19 +23,18 @@ export default function Deck({
   scannedCard,
   setScannedCard,
   showOnlyMissing,
+  showAlternateImages,
 }: DeckProps) {
   const [currentCard, setCurrentCard] = useState(0);
   let roster = players.filter((player: Player) => player.team === team);
   roster =
     showOnlyMissing && collectedCards.size > 0 && collectedCards.size < 20
-      ? roster.filter((card: Player) => !collectedCards.has(card.number))
+      ? roster.filter((card: Player) => !collectedCards.has(card.id))
       : roster;
 
   useEffect(() => {
     if (scannedCard) {
-      const index = roster.findIndex(
-        (card: Player) => card.number === scannedCard
-      );
+      const index = roster.findIndex((card: Player) => card.id === scannedCard);
       if (index !== -1) {
         setCurrentCard(index);
       }
@@ -111,7 +111,8 @@ export default function Deck({
               <Card
                 player={card}
                 active={currentCard === id}
-                collected={collectedCards.has(card.number)}
+                collected={collectedCards.has(card.id)}
+                showAlternateImage={showAlternateImages}
               />
             </div>
           );

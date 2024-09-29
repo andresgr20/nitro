@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": "r9n1",
     "name": "Scotty Fowlie",
     "number": "11",
     "quote": "my whole life is thunder",
@@ -14,7 +14,7 @@
     "team": "nitro"
   },
   {
-    "id": 1,
+    "id": "xcdc",
     "name": "Gavin Fong",
     "number": "99",
     "quote": "love that for you",
@@ -28,7 +28,7 @@
     "team": "nitro"
   },
   {
-    "id": 2,
+    "id": "u7b9",
     "name": "Diego Santesteban",
     "number": "0",
     "quote": "Concept of a plan",
@@ -42,7 +42,7 @@
     "team": "nitro"
   },
   {
-    "id": 3,
+    "id": "rhrn",
     "name": "Andres Garcia",
     "number": "20",
     "quote": "Find me in a concert",
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": "s0cw",
     "name": "Aaron Fromback",
     "number": "52",
     "quote": "Fromby",
@@ -73,7 +73,7 @@
     "team": "nitro"
   },
   {
-    "id": 5,
+    "id": "tlte",
     "name": "Andy DB",
     "number": "21",
     "quote": "Ze French do it better",
@@ -87,7 +87,7 @@
     "team": "nitro"
   },
   {
-    "id": 6,
+    "id": "uefv",
     "name": "Andrew Shadlock",
     "number": "28",
     "quote": "Popping my GayBowl cherry",
@@ -101,7 +101,7 @@
     "team": "nitro"
   },
   {
-    "id": 7,
+    "id": "g8ie",
     "name": "Braden Leibovitch",
     "number": "67",
     "quote": "Relax!",
@@ -115,7 +115,7 @@
     "team": "nitro"
   },
   {
-    "id": 8,
+    "id": "iuij",
     "name": "Dallas Pomeranz",
     "number": "2",
     "quote": "A star is born",
@@ -129,7 +129,7 @@
     "team": "nitro"
   },
   {
-    "id": 9,
+    "id": "y3b8",
     "name": "Denis Wang",
     "number": "85",
     "quote": "Dance floor Latino",
@@ -142,7 +142,7 @@
     "team": "nitro"
   },
   {
-    "id": 10,
+    "id": "50rz",
     "name": "Eloi Sanchez",
     "number": "22",
     "quote": "Mexidaddy",
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": "bqc0",
     "name": "Jacob Pleet",
     "number": "18",
     "quote": "Gen Z",
@@ -181,7 +181,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": "ike7",
     "name": "Jack Malcolm",
     "number": "96",
     "quote": "Get jacked",
@@ -195,7 +195,7 @@
     "team": "nitro"
   },
   {
-    "id": 13,
+    "id": "ggtr",
     "name": "Jonathan Zaid",
     "number": "30",
     "quote": "running (bare)back",
@@ -210,7 +210,7 @@
     "secret": [{ "secret": "text", "description": "I'm gay" }]
   },
   {
-    "id": 14,
+    "id": "e1mp",
     "name": "Matthew Malaguti",
     "number": "10",
     "quote": "👋",
@@ -223,7 +223,7 @@
     "team": "nitro"
   },
   {
-    "id": 15,
+    "id": "hnme",
     "name": "\"Babe\" Chalaturnyk",
     "number": "23",
     "quote": "Never put babe in the corner",
@@ -237,7 +237,7 @@
     "team": "nitro"
   },
   {
-    "id": 16,
+    "id": "4mzm",
     "name": "Mitchell Burke",
     "number": "17",
     "quote": "the pterodactyls are coming",
@@ -251,7 +251,7 @@
     "team": "nitro"
   },
   {
-    "id": 17,
+    "id": "o1ki",
     "name": "Tim Sun",
     "number": "69",
     "quote": "woof",
@@ -264,7 +264,7 @@
     "team": "nitro"
   },
   {
-    "id": 18,
+    "id": "o6am",
     "name": "Trent Holmes",
     "number": "39",
     "quote": "Ball Hungry",
@@ -284,7 +284,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": "jkyq",
     "name": "Colin Harvey-Lewis",
     "number": "#1",
     "quote": "Winning IS fun ",
@@ -298,7 +298,7 @@
     "team": "nitro"
   },
   {
-    "id": 20,
+    "id": "cdrn",
     "name": "Chris White",
     "number": "#73",
     "quote": "Victory awaits",
@@ -312,7 +312,7 @@
     "team": "tundra"
   },
   {
-    "id": 21,
+    "id": "bi64",
     "name": "Taylor Green",
     "number": "#56",
     "quote": "We never stop",
@@ -326,7 +326,7 @@
     "team": "tundra"
   },
   {
-    "id": 22,
+    "id": "wku5",
     "name": "Jane Brown",
     "number": "#14",
     "quote": "Keep pushing",
@@ -340,7 +340,7 @@
     "team": "tundra"
   },
   {
-    "id": 23,
+    "id": "spxy",
     "name": "Jane Brown",
     "number": "#38",
     "quote": "Victory awaits",
@@ -354,7 +354,7 @@
     "team": "tundra"
   },
   {
-    "id": 24,
+    "id": "hbwa",
     "name": "Taylor Green",
     "number": "#66",
     "quote": "Victory awaits",
@@ -368,7 +368,7 @@
     "team": "tundra"
   },
   {
-    "id": 25,
+    "id": "yi75",
     "name": "John Doe",
     "number": "#6",
     "quote": "We never stop",
@@ -382,7 +382,7 @@
     "team": "tundra"
   },
   {
-    "id": 26,
+    "id": "9pzz",
     "name": "Chris White",
     "number": "#70",
     "quote": "One step at a time",
@@ -396,7 +396,7 @@
     "team": "tundra"
   },
   {
-    "id": 27,
+    "id": "hn3i",
     "name": "Alex Smith",
     "number": "#49",
     "quote": "Focus and win",
@@ -410,7 +410,7 @@
     "team": "tundra"
   },
   {
-    "id": 28,
+    "id": "ovtf",
     "name": "Alex Smith",
     "number": "#53",
     "quote": "Focus and win",
@@ -424,7 +424,7 @@
     "team": "tundra"
   },
   {
-    "id": 29,
+    "id": "iwz8",
     "name": "Taylor Green",
     "number": "#41",
     "quote": "Victory awaits",
@@ -438,7 +438,7 @@
     "team": "tundra"
   },
   {
-    "id": 30,
+    "id": "6yg4",
     "name": "Chris White",
     "number": "#75",
     "quote": "Focus and win",
@@ -452,7 +452,7 @@
     "team": "tundra"
   },
   {
-    "id": 31,
+    "id": "nw9s",
     "name": "John Doe",
     "number": "#82",
     "quote": "Victory awaits",
@@ -466,7 +466,7 @@
     "team": "tundra"
   },
   {
-    "id": 32,
+    "id": "vz51",
     "name": "Jane Brown",
     "number": "#88",
     "quote": "Keep pushing",
@@ -480,7 +480,7 @@
     "team": "tundra"
   },
   {
-    "id": 33,
+    "id": "e6qs",
     "name": "John Doe",
     "number": "#29",
     "quote": "Victory awaits",
@@ -494,7 +494,7 @@
     "team": "tundra"
   },
   {
-    "id": 34,
+    "id": "4jdq",
     "name": "Jane Brown",
     "number": "#21",
     "quote": "One step at a time",
@@ -508,7 +508,7 @@
     "team": "tundra"
   },
   {
-    "id": 35,
+    "id": "pyew",
     "name": "John Doe",
     "number": "#84",
     "quote": "Focus and win",
@@ -522,7 +522,7 @@
     "team": "tundra"
   },
   {
-    "id": 36,
+    "id": "32vb",
     "name": "Taylor Green",
     "number": "#2",
     "quote": "Focus and win",
@@ -536,7 +536,7 @@
     "team": "tundra"
   },
   {
-    "id": 37,
+    "id": "jjxl",
     "name": "Chris White",
     "number": "#62",
     "quote": "Keep pushing",
@@ -550,7 +550,7 @@
     "team": "tundra"
   },
   {
-    "id": 38,
+    "id": "t844",
     "name": "Alex Smith",
     "number": "#91",
     "quote": "Keep pushing",
@@ -564,7 +564,7 @@
     "team": "tundra"
   },
   {
-    "id": 39,
+    "id": "cuja",
     "name": "Chris White",
     "number": "#58",
     "quote": "Focus and win",
@@ -578,7 +578,7 @@
     "team": "tundra"
   },
   {
-    "id": 40,
+    "id": "kita",
     "name": "John Doe",
     "number": "#17",
     "quote": "We never stop",
@@ -592,7 +592,7 @@
     "team": "polaris"
   },
   {
-    "id": 41,
+    "id": "gps4",
     "name": "Jane Brown",
     "number": "#28",
     "quote": "Keep pushing forward",
@@ -606,7 +606,7 @@
     "team": "polaris"
   },
   {
-    "id": 42,
+    "id": "ts7d",
     "name": "Taylor Green",
     "number": "#12",
     "quote": "Victory awaits",
@@ -620,7 +620,7 @@
     "team": "polaris"
   },
   {
-    "id": 43,
+    "id": "nila",
     "name": "Alex Smith",
     "number": "#45",
     "quote": "Stay strong",
@@ -634,7 +634,7 @@
     "team": "polaris"
   },
   {
-    "id": 44,
+    "id": "gkvw",
     "name": "John Doe",
     "number": "#35",
     "quote": "Push harder",
@@ -648,7 +648,7 @@
     "team": "polaris"
   },
   {
-    "id": 45,
+    "id": "4txf",
     "name": "Chris White",
     "number": "#19",
     "quote": "Never give up",
@@ -662,7 +662,7 @@
     "team": "polaris"
   },
   {
-    "id": 46,
+    "id": "kni7",
     "name": "Jane Brown",
     "number": "#11",
     "quote": "Stay focused",
@@ -676,7 +676,7 @@
     "team": "polaris"
   },
   {
-    "id": 47,
+    "id": "1546",
     "name": "Taylor Green",
     "number": "#27",
     "quote": "We never stop",
@@ -690,7 +690,7 @@
     "team": "polaris"
   },
   {
-    "id": 48,
+    "id": "rb2f",
     "name": "Alex Smith",
     "number": "#54",
     "quote": "One step at a time",
@@ -704,7 +704,7 @@
     "team": "polaris"
   },
   {
-    "id": 49,
+    "id": "322j",
     "name": "Chris White",
     "number": "#63",
     "quote": "Victory awaits",
@@ -718,7 +718,7 @@
     "team": "polaris"
   },
   {
-    "id": 50,
+    "id": "namy",
     "name": "Jane Brown",
     "number": "#80",
     "quote": "Focus and win",
@@ -732,7 +732,7 @@
     "team": "polaris"
   },
   {
-    "id": 51,
+    "id": "7jfe",
     "name": "Taylor Green",
     "number": "#71",
     "quote": "Push harder",
@@ -746,7 +746,7 @@
     "team": "polaris"
   },
   {
-    "id": 52,
+    "id": "c9jz",
     "name": "Alex Smith",
     "number": "#67",
     "quote": "We never stop",
@@ -760,7 +760,7 @@
     "team": "polaris"
   },
   {
-    "id": 53,
+    "id": "6v2e",
     "name": "Chris White",
     "number": "#94",
     "quote": "Stay focused",
@@ -774,7 +774,7 @@
     "team": "polaris"
   },
   {
-    "id": 54,
+    "id": "rw8h",
     "name": "John Doe",
     "number": "#43",
     "quote": "Keep pushing",
@@ -788,7 +788,7 @@
     "team": "polaris"
   },
   {
-    "id": 55,
+    "id": "9eok",
     "name": "Jane Brown",
     "number": "#99",
     "quote": "Victory awaits",
@@ -802,7 +802,7 @@
     "team": "polaris"
   },
   {
-    "id": 56,
+    "id": "6xzo",
     "name": "Chris White",
     "number": "#87",
     "quote": "Never stop",
