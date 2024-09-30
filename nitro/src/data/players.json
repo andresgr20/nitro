@@ -115,7 +115,13 @@
     "instagram": "heyitsbraden",
     "position": "GOAT Commissioner",
     "looking": "A win!",
-    "team": "nitro"
+    "team": "nitro",
+    "secret": [
+      {
+        "secret": "youtube",
+        "description": "https://youtu.be/GY-rLBazg-Q?si=6bqGub9uaWvRtQcn"
+      }
+    ]
   },
   {
     "id": "iuij",

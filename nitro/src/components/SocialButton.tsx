@@ -1,4 +1,4 @@
-import { GitHub, Instagram } from "@mui/icons-material";
+import { GitHub, Instagram, YouTube } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import SpotifyIcon from "./SpotifyIcon";
 import TiktokIcon from "./TiktokIcon";
@@ -23,6 +23,8 @@ export default function SocialButton({
       return <GitHub fontSize="large" />;
     } else if (social === "tiktok") {
       return <TiktokIcon className="w-14 h-14 fill-current text-gold" />;
+    } else if (social === "youtube") {
+      return <YouTube fontSize="large" />;
     }
     return;
   };
