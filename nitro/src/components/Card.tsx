@@ -47,8 +47,6 @@ export default function Card({
     }
   };
 
-  console.log(collected);
-
   const acquired = () => (collected ? "border-gold" : "border-white");
 
   const team = () =>

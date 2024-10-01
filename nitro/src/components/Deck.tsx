@@ -39,7 +39,10 @@ export default function Deck({
         setCurrentCard(index);
       }
     }
-  }, [team, scannedCard, roster]);
+    if (showOnlyMissing) {
+      setCurrentCard(0);
+    }
+  }, [team, scannedCard, showOnlyMissing]);
 
   const handlePrev = () => {
     if (scannedCard && setScannedCard) {
@@ -62,6 +65,26 @@ export default function Deck({
     trackMouse: true,
   });
 
+  const getCardClasses = (id: number) => {
+    const isCurrent = id === currentCard;
+    const isPrev =
+      id === (currentCard - 1 + roster.length) % roster.length &&
+      roster.length > 1;
+    const isNext =
+      id === (currentCard + 1) % roster.length && roster.length > 1;
+    const isTwoBefore = id < currentCard - 1;
+    const isTwoAfter = id > currentCard + 1;
+
+    return `
+      absolute transition-transform duration-500 ease-in-out transform
+      ${isCurrent ? "scale-100 z-10 opacity-100 shadow-2xl" : ""}
+      ${isPrev ? "translate-x-[-250px] scale-75 opacity-50 z-0" : ""}
+      ${isNext ? "translate-x-[250px] scale-75 opacity-50 z-0" : ""}
+      ${isTwoBefore ? "translate-x-[-500px] scale-50 opacity-25 z-0" : ""}
+      ${isTwoAfter ? "translate-x-[500px] scale-50 opacity-25 z-0" : ""}
+    `;
+  };
+
   return (
     <div className="w-full mx-auto">
       <div
@@ -70,44 +93,22 @@ export default function Deck({
       >
         {roster.map((card, id) => {
           const isVisible =
-            id === currentCard ||
-            id === (currentCard + 1) % roster.length ||
-            id === (currentCard + 2) % roster.length ||
-            id === (currentCard - 1 + roster.length) % roster.length ||
-            id === (currentCard - 2 + roster.length) % roster.length;
+            roster.length <= 4
+              ? id === currentCard ||
+                id === (currentCard + 1) % roster.length ||
+                id === (currentCard - 1 + roster.length) % roster.length
+              : id === currentCard ||
+                id === (currentCard + 1) % roster.length ||
+                id === (currentCard + 2) % roster.length ||
+                id === (currentCard - 1 + roster.length) % roster.length ||
+                id === (currentCard - 2 + roster.length) % roster.length;
 
           if (!isVisible) {
             return null;
           }
 
           return (
-            <div
-              key={card.id}
-              className={`absolute transition-transform duration-500 ease-in-out transform
-          ${id === currentCard ? "scale-100 z-10 opacity-100 shadow-2xl" : ""}
-          ${
-            id === currentCard - 1 ||
-            (currentCard === 0 && id === roster.length - 1)
-              ? "translate-x-[-250px] scale-75 opacity-50 z-0"
-              : ""
-          }
-          ${
-            id === currentCard + 1 ||
-            (currentCard === roster.length - 1 && id === 0)
-              ? "translate-x-[250px] scale-75 opacity-50 z-0"
-              : ""
-          }
-          ${
-            id < currentCard - 1
-              ? "translate-x-[-500px] scale-50 opacity-25 z-0"
-              : ""
-          }
-          ${
-            id > currentCard + 1
-              ? "translate-x-[500px] scale-50 opacity-25 z-0"
-              : ""
-          }`}
-            >
+            <div key={card.id} className={getCardClasses(id)}>
               <Card
                 player={card}
                 active={currentCard === id}
@@ -119,13 +120,23 @@ export default function Deck({
         })}
       </div>
       <div className="relative flex justify-center mt-4 items-center">
-        <IconButton onClick={handlePrev} aria-label="back" color="inherit">
+        <IconButton
+          onClick={handlePrev}
+          aria-label="back"
+          color="inherit"
+          disabled={roster.length === 1}
+        >
           <ArrowCircleLeftOutlined fontSize="large" />
         </IconButton>
         <p className="text-xl font-bold inline-block w-48 text-center">
-          {roster[currentCard].name}
+          {roster[currentCard]?.name}
         </p>
-        <IconButton onClick={handleNext} aria-label="next" color="inherit">
+        <IconButton
+          onClick={handleNext}
+          aria-label="next"
+          color="inherit"
+          disabled={roster.length === 1}
+        >
           <ArrowCircleRightOutlined fontSize="large" />
         </IconButton>
       </div>

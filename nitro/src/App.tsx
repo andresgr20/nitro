@@ -77,7 +77,7 @@ function App() {
     <div
       className={`${teams[selectedTeam].background} min-h-screen flex flex-col items-center`}
     >
-      <div className="text-6xl md:text-5xl sm:text-4xl mt-4 font-bold uppercase py-4">
+      <div className="text-6xl md:text-5xl sm:text-4xl mt-4 font-bold uppercase py-4 text-center">
         Northstars {teams[selectedTeam].title}
       </div>
       <div className="sm:text-base my-2 text-center px-4">
@@ -90,12 +90,12 @@ function App() {
         />
       )}
       {selectedTeam === "nitro" ? (
-        <div className="text-center">
+        <div className="text-cente">
           <div className="sm:text-base my-2 text-center px-4">
             <p className="text-xl font-semibold">{collectedText}</p>
           </div>
           {collectedCards.size > 0 && (
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+            <div className="flex flex-col items-center space-y-2 md:space-y-0 md:space-x-4">
               {collectedCards.size < 20 && (
                 <label className="flex items-center space-x-2 cursor-pointer">
                   <span onClick={() => setShowMissingOnly(!showMissingOnly)}>
