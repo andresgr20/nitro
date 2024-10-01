@@ -66,13 +66,14 @@ function App() {
     window.history.replaceState({}, document.title, window.location.pathname);
   }, []);
 
-  const collectedText =
-    collectedCards.size === 0
-      ? `No ${teams[selectedTeam].title} Trading Cards have been collected`
-      : collectedCards.size < 20
-      ? `You have collected ${collectedCards.size} / 20 ${teams[selectedTeam].title} Trading Cards`
-      : "🏆 Congratulations on collecting all the Nitro players! A representative will be in touch to welcome you into the exclusive Nitro cult. Let's ride!🏎️";
-
+  const getCollectedText = () => {
+    const count = collectedCards.size;
+    if (count === 0)
+      return `No ${teams[selectedTeam].title} Trading Cards have been collected`;
+    if (count < 20)
+      return `You have collected ${count} / 20 ${teams[selectedTeam].title} Trading Cards`;
+    return "🏆 Congratulations on collecting all the Nitro players! A representative will be in touch to welcome you into the exclusive Nitro cult. Let's ride!🏎️";
+  };
   return (
     <div
       className={`${teams[selectedTeam].background} min-h-screen flex flex-col items-center`}
@@ -92,7 +93,7 @@ function App() {
       {selectedTeam === "nitro" ? (
         <div className="text-cente">
           <div className="sm:text-base my-2 text-center px-4">
-            <p className="text-xl font-semibold">{collectedText}</p>
+            <p className="text-xl font-semibold">{getCollectedText()}</p>
           </div>
           {collectedCards.size > 0 && (
             <div className="flex flex-col items-center space-y-2 md:space-y-0 md:space-x-4">
@@ -135,7 +136,7 @@ function App() {
           showAlternateImages={showAlternateImages}
         />
       </div>
-      <div className="md:fixed bottom-0 w-full text-center py-2">
+      <footer className="md:fixed bottom-0 w-full text-center py-2">
         <a
           href="https://www.linkedin.com/in/agarciar/"
           className="no-underline"
@@ -144,7 +145,7 @@ function App() {
         >
           © Andres Garcia
         </a>
-      </div>
+      </footer>
     </div>
   );
 }
