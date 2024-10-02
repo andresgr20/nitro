@@ -21,6 +21,7 @@ module.exports = {
         gold: "#EAA11B",
         tundra: "#037b96",
         polaris: "#814EB2",
+        olive: "#6A9B00",
       },
     },
   },

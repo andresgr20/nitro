@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import Card, { Player } from "./Card";
 import players from "../data/players.json";
@@ -80,8 +80,8 @@ export default function Deck({
       ${isCurrent ? "scale-100 z-10 opacity-100 shadow-2xl" : ""}
       ${isPrev ? "translate-x-[-250px] scale-75 opacity-50 z-0" : ""}
       ${isNext ? "translate-x-[250px] scale-75 opacity-50 z-0" : ""}
-      ${isTwoBefore ? "translate-x-[-500px] scale-50 opacity-25 z-0" : ""}
-      ${isTwoAfter ? "translate-x-[500px] scale-50 opacity-25 z-0" : ""}
+      ${isTwoBefore ? "translate-x-[-400px] scale-50 opacity-25 z-0" : ""}
+      ${isTwoAfter ? "translate-x-[400px] scale-50 opacity-25 z-0" : ""}
     `;
   };
 

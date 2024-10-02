@@ -2,13 +2,7 @@ import { useEffect, useState } from "react";
 import Deck from "./components/Deck";
 import TeamSelectorButton from "./components/TeamSelectorButton";
 import { initGA, logPageView } from "./analytics";
-import {
-  Checkbox,
-  FormControl,
-  FormControlLabel,
-  FormGroup,
-  Switch,
-} from "@mui/material";
+import { FormControlLabel, FormGroup, Switch } from "@mui/material";
 import players from "data/players.json";
 
 const teamSelectorEnabled = true;
@@ -85,64 +79,73 @@ function App() {
       className={`${teams[selectedTeam].background} min-h-screen flex flex-col items-center`}
     >
       <div className="text-6xl md:text-5xl sm:text-4xl mt-4 font-bold uppercase py-4 text-center">
-        Toronto Northstars {teams[selectedTeam].title}
-      </div>
-      <div className="sm:text-base my-2 text-center px-4">
-        <p className="text-xl">{teams[selectedTeam].description} </p>
+        Toronto Northstars
       </div>
       {teamSelectorEnabled && (
-        <TeamSelectorButton
-          selectedTeam={selectedTeam}
-          setSelectedTeam={setSelectedTeam}
-        />
+        <div className="pb-4">
+          <TeamSelectorButton
+            selectedTeam={selectedTeam}
+            setSelectedTeam={setSelectedTeam}
+          />
+        </div>
       )}
-      {selectedTeam === "nitro" && (
-        <div className="items-center">
-          <div className="sm:text-base my-2 text-center px-4">
-            <p className="text-xl font-semibold">{getCollectedText()}</p>
-          </div>
-          {collectedCards.size > 0 && (
-            <FormGroup row className="justify-center">
-              {collectedCards.size < 20 && (
+      <div className="border bg-gray-200 backdrop-blur-md shadow-lg rounded-xl max-w-6xl w-full max-w text-center">
+        <p className="text-6xl md:text-5xl sm:text-4xl font-bold uppercase text-center pt-2">
+          {teams[selectedTeam].title}
+        </p>
+        <div className="sm:text-base my-2 text-center px-4">
+          <p className="text-xl">{teams[selectedTeam].description} </p>
+        </div>
+
+        <div className="flex justify-center mt-10">
+          <Deck
+            team={selectedTeam}
+            collectedCards={collectedCards}
+            scannedCard={scannedCard}
+            setScannedCard={setScannedCard}
+            showOnlyMissing={showMissingOnly}
+            showAlternateImages={showAlternateImages}
+          />
+        </div>
+        {selectedTeam === "nitro" && (
+          <div className="items-center">
+            <div className="sm:text-base my-2 text-center px-4">
+              <p className="text-xl font-semibold">{getCollectedText()}</p>
+            </div>
+            {collectedCards.size > 0 && (
+              <FormGroup row className="justify-center pb-2">
+                {collectedCards.size < 20 && (
+                  <FormControlLabel
+                    labelPlacement="end"
+                    label="Show only missing cards"
+                    control={
+                      <Switch
+                        checked={showMissingOnly}
+                        onChange={() => setShowMissingOnly(!showMissingOnly)}
+                      />
+                    }
+                  />
+                )}
+
                 <FormControlLabel
                   labelPlacement="end"
-                  label="Show only missing cards"
+                  label="Show alternate images"
                   control={
                     <Switch
-                      checked={showMissingOnly}
-                      onChange={() => setShowMissingOnly(!showMissingOnly)}
+                      checked={showAlternateImages}
+                      onChange={() =>
+                        setShowAlternateImages(!showAlternateImages)
+                      }
                     />
                   }
                 />
-              )}
-
-              <FormControlLabel
-                labelPlacement="end"
-                label="Show alternate images"
-                control={
-                  <Switch
-                    checked={showAlternateImages}
-                    onChange={() =>
-                      setShowAlternateImages(!showAlternateImages)
-                    }
-                  />
-                }
-              />
-            </FormGroup>
-          )}
-        </div>
-      )}
-      <div className="w-screen flex justify-center mt-10">
-        <Deck
-          team={selectedTeam}
-          collectedCards={collectedCards}
-          scannedCard={scannedCard}
-          setScannedCard={setScannedCard}
-          showOnlyMissing={showMissingOnly}
-          showAlternateImages={showAlternateImages}
-        />
+              </FormGroup>
+            )}
+          </div>
+        )}
       </div>
-      <footer className="md:fixed bottom-0 w-full text-center py-2">
+
+      <footer className="md:fixed bottom-0 w-full text-center pt-2">
         <a
           href="https://www.linkedin.com/in/agarciar/"
           className="no-underline"
