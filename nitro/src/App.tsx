@@ -2,10 +2,16 @@ import { useEffect, useState } from "react";
 import Deck from "./components/Deck";
 import TeamSelectorButton from "./components/TeamSelectorButton";
 import { initGA, logPageView } from "./analytics";
-import { Checkbox } from "@mui/material";
+import {
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  Switch,
+} from "@mui/material";
 import players from "data/players.json";
 
-const teamSelectorEnabled = false;
+const teamSelectorEnabled = true;
 
 type Team = {
   title: string;
@@ -79,7 +85,7 @@ function App() {
       className={`${teams[selectedTeam].background} min-h-screen flex flex-col items-center`}
     >
       <div className="text-6xl md:text-5xl sm:text-4xl mt-4 font-bold uppercase py-4 text-center">
-        Northstars {teams[selectedTeam].title}
+        Toronto Northstars {teams[selectedTeam].title}
       </div>
       <div className="sm:text-base my-2 text-center px-4">
         <p className="text-xl">{teams[selectedTeam].description} </p>
@@ -90,42 +96,42 @@ function App() {
           setSelectedTeam={setSelectedTeam}
         />
       )}
-      {selectedTeam === "nitro" ? (
-        <div className="text-cente">
+      {selectedTeam === "nitro" && (
+        <div className="items-center">
           <div className="sm:text-base my-2 text-center px-4">
             <p className="text-xl font-semibold">{getCollectedText()}</p>
           </div>
           {collectedCards.size > 0 && (
-            <div className="flex flex-col items-center space-y-2 md:space-y-0 md:space-x-4">
+            <FormGroup row className="justify-center">
               {collectedCards.size < 20 && (
-                <label className="flex items-center space-x-2 cursor-pointer">
-                  <span onClick={() => setShowMissingOnly(!showMissingOnly)}>
-                    Show only missing cards
-                  </span>
-                  <Checkbox
-                    checked={showMissingOnly}
-                    onChange={() => setShowMissingOnly(!showMissingOnly)}
-                    aria-label="Show only missing cards"
-                  />
-                </label>
+                <FormControlLabel
+                  labelPlacement="end"
+                  label="Show only missing cards"
+                  control={
+                    <Switch
+                      checked={showMissingOnly}
+                      onChange={() => setShowMissingOnly(!showMissingOnly)}
+                    />
+                  }
+                />
               )}
 
-              <label className="flex items-center space-x-2 cursor-pointer">
-                <span
-                  onClick={() => setShowAlternateImages(!showAlternateImages)}
-                >
-                  Show alternate images
-                </span>
-                <Checkbox
-                  checked={showAlternateImages}
-                  onChange={() => setShowAlternateImages(!showAlternateImages)}
-                  aria-label="Show alternate images"
-                />
-              </label>
-            </div>
+              <FormControlLabel
+                labelPlacement="end"
+                label="Show alternate images"
+                control={
+                  <Switch
+                    checked={showAlternateImages}
+                    onChange={() =>
+                      setShowAlternateImages(!showAlternateImages)
+                    }
+                  />
+                }
+              />
+            </FormGroup>
           )}
         </div>
-      ) : null}
+      )}
       <div className="w-screen flex justify-center mt-10">
         <Deck
           team={selectedTeam}
