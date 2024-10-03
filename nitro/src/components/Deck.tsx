@@ -26,6 +26,13 @@ export default function Deck({
   showAlternateImages,
 }: DeckProps) {
   const [currentCard, setCurrentCard] = useState(0);
+  const [teamCardIndexes, setTeamCardIndexes] = useState<
+    Record<string, number>
+  >({
+    nitro: 0,
+    tundra: 0,
+    polaris: 0,
+  });
   let roster = players.filter((player: Player) => player.team === team);
   roster =
     showOnlyMissing && collectedCards.size > 0 && collectedCards.size < 20
@@ -44,18 +51,39 @@ export default function Deck({
     }
   }, [team, scannedCard, showOnlyMissing]);
 
+  useEffect(() => {
+    const savedIndex = teamCardIndexes[team];
+    const validIndex = Math.min(savedIndex, roster.length - 1);
+    setCurrentCard(validIndex);
+
+    setTeamCardIndexes((prevIndexes) => ({
+      ...prevIndexes,
+      [team]: validIndex,
+    }));
+  }, [team, roster.length]);
+
   const handlePrev = () => {
     if (scannedCard && setScannedCard) {
       setScannedCard(null);
     }
-    setCurrentCard((prev) => (prev > 0 ? prev - 1 : roster.length - 1));
+    const newCard = currentCard > 0 ? currentCard - 1 : roster.length - 1;
+    setCurrentCard(newCard);
+    setTeamCardIndexes((prevIndexes) => ({
+      ...prevIndexes,
+      [team]: newCard,
+    }));
   };
 
   const handleNext = () => {
     if (scannedCard && setScannedCard) {
       setScannedCard(null);
     }
-    setCurrentCard((prev) => (prev < roster.length - 1 ? prev + 1 : 0));
+    const newCard = currentCard < roster.length - 1 ? currentCard + 1 : 0;
+    setCurrentCard(newCard);
+    setTeamCardIndexes((prevIndexes) => ({
+      ...prevIndexes,
+      [team]: newCard,
+    }));
   };
 
   const swipeHandlers = useSwipeable({

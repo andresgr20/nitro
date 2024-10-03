@@ -17,11 +17,11 @@ export interface Player {
   quote: string;
   likes: string;
   dislikes: string;
-  gif: string;
+  gif?: string;
   pic: string;
   instagram?: string;
   looking: string;
-  position: string;
+  position?: string;
   team: string;
   secret?: Secret[];
 }

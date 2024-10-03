@@ -29,7 +29,7 @@ const teams: Record<string, Team> = {
   polaris: {
     title: "Polaris",
     description:
-      "Toronto's brattiest, greenest, and speediest flag football traveling team is heading to Austin GayBowl 2024.",
+      "Toronto's purple team :) I don't know give me a blurb if you are in Polaris 🔫.",
     background: "bg-polaris",
   },
 };
