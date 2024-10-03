@@ -4,6 +4,7 @@ import TeamSelectorButton from "./components/TeamSelectorButton";
 import { initGA, logPageView } from "./analytics";
 import { FormControlLabel, FormGroup, Switch } from "@mui/material";
 import players from "data/players.json";
+import "./index.css";
 
 const teamSelectorEnabled = true;
 
@@ -78,7 +79,7 @@ function App() {
     <div
       className={`${teams[selectedTeam].background} min-h-screen flex flex-col items-center`}
     >
-      <div className="text-6xl md:text-5xl sm:text-4xl mt-4 font-bold uppercase py-4 text-center">
+      <div className="text-4xl md:text-5xl lg:text-6xl  mt-4 font-bold uppercase py-4 text-center">
         Toronto Northstars
       </div>
       {teamSelectorEnabled && (
@@ -90,7 +91,7 @@ function App() {
         </div>
       )}
       <div className="border bg-gray-200 backdrop-blur-md shadow-lg rounded-xl max-w-6xl w-full max-w text-center">
-        <p className="text-6xl md:text-5xl sm:text-4xl font-bold uppercase text-center pt-2">
+        <p className="text-3xl md:text-4xl lg:text-5xl font-bold uppercase text-center pt-2">
           {teams[selectedTeam].title}
         </p>
         <div className="sm:text-base my-2 text-center px-4">
