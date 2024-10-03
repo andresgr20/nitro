@@ -79,7 +79,7 @@ function App() {
     <div
       className={`${teams[selectedTeam].background} min-h-screen flex flex-col items-center`}
     >
-      <div className="text-4xl md:text-5xl lg:text-6xl  mt-4 font-bold uppercase py-4 text-center">
+      <div className="text-5xl lg:text-6xl  mt-4 font-bold uppercase py-4 text-center">
         Toronto Northstars
       </div>
       {teamSelectorEnabled && (
@@ -90,7 +90,7 @@ function App() {
           />
         </div>
       )}
-      <div className="border bg-gray-200 backdrop-blur-md shadow-lg rounded-xl max-w-6xl w-full max-w text-center">
+      <div className="border-black bg-black backdrop-blur-md shadow-lg rounded-xl max-w-6xl w-full max-w text-center text-white">
         <p className="text-3xl md:text-4xl lg:text-5xl font-bold uppercase text-center pt-2">
           {teams[selectedTeam].title}
         </p>
