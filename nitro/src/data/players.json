@@ -307,16 +307,16 @@
     "team": "nitro"
   },
   {
-    "id": "cdrn",
-    "name": "James In The City",
-    "number": "69",
-    "quote": "When life gives you lemons, make a martini.",
-    "dislikes": "Polyester.",
-    "likes": "Wine. Luxury real estate. Collecting passport stamps.",
-    "pic": "james-pic.jpeg",
-    "instagram": "https://www.instagram.com/thejamesinthecity",
-    "position": "",
-    "looking": "A tan.",
+    "id": "spxy",
+    "name": "Matt Zak",
+    "number": "11",
+    "quote": "Do they not know who I think I am?",
+    "dislikes": "Any amount or form of labor, NYT Games",
+    "likes": "Gaming, fantasy/sci-fi, NYT Games",
+    "pic": "matt-zak-pic.jpeg",
+    "instagram": "https://www.instagram.com/themattzak",
+    "position": "Menace",
+    "looking": "Usually a drink, a snack, or a “snack”",
     "team": "tundra"
   },
   {
@@ -346,19 +346,6 @@
     "team": "tundra"
   },
   {
-    "id": "spxy",
-    "name": "Matt Zak",
-    "number": "11",
-    "quote": "Do they not know who I think I am?",
-    "dislikes": "Any amount or form of labor, NYT Games",
-    "likes": "Gaming, fantasy/sci-fi, NYT Games",
-    "pic": "matt-zak-pic.jpeg",
-    "instagram": "https://www.instagram.com/themattzak",
-    "position": "Menace",
-    "looking": "Usually a drink, a snack, or a “snack”",
-    "team": "tundra"
-  },
-  {
     "id": "hbwa",
     "name": "Ken Ying",
     "number": "10",
@@ -369,6 +356,19 @@
     "instagram": "https://www.instagram.com/kenying9990",
     "position": "",
     "looking": "Texas BBQ and Beefy men",
+    "team": "tundra"
+  },
+  {
+    "id": "cdrn",
+    "name": "James In The City",
+    "number": "69",
+    "quote": "When life gives you lemons, make a martini.",
+    "dislikes": "Polyester.",
+    "likes": "Wine. Luxury real estate. Collecting passport stamps.",
+    "pic": "james-pic.jpeg",
+    "instagram": "https://www.instagram.com/thejamesinthecity",
+    "position": "",
+    "looking": "A tan.",
     "team": "tundra"
   },
   {
@@ -393,7 +393,7 @@
     "likes": "Intrigue",
     "instagram": "https://www.instagram.com/marcrodrigue",
     "pic": "marc-pic.jpeg",
-    "position": "",
+    "position": "Versatile, aka did the most in the field",
     "looking": "A high five.",
     "team": "polaris"
   },
