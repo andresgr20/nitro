@@ -262,7 +262,7 @@
   {
     "id": "o1ki",
     "name": "Tim Sun",
-    "number": "69",
+    "number": "25",
     "quote": "woof",
     "dislikes": "woof",
     "likes": "woof woof ",
@@ -359,6 +359,18 @@
     "team": "tundra"
   },
   {
+    "id": "cdlm",
+    "name": "Carsson Swales",
+    "number": "6",
+    "quote": "",
+    "dislikes": "Attending Practice",
+    "likes": "Playing Sports",
+    "pic": "carsson-pic.jpeg",
+    "position": "Safety",
+    "looking": "Victory!",
+    "team": "tundra"
+  },
+  {
     "id": "cdrn",
     "name": "James In The City",
     "number": "69",
@@ -382,6 +394,19 @@
     "instagram": "https://www.instagram.com/scottiedanger",
     "position": "Fetal",
     "looking": "Insufferable Inside Jokes",
+    "team": "tundra"
+  },
+  {
+    "id": "cdoj",
+    "name": "Max Denley",
+    "number": "33",
+    "quote": "I'm not superstitious...but I'm a little stitious.",
+    "dislikes": "Mint, JK Rowling, and meetings that could have been an email",
+    "likes": "Dogs, dinosaurs, the office, wordle",
+    "pic": "max-pic.jpeg",
+    "instagram": "https://www.instagram.com/tothemaxd",
+    "position": "Receiver (on the field..)",
+    "looking": "To catch some balls",
     "team": "tundra"
   },
   {
