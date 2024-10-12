@@ -39,7 +39,13 @@
     "instagram": "https://www.instagram.com/dsantesteban",
     "position": "Whatever is needed",
     "looking": "Good BBQ, good beer, cowboy boots",
-    "team": "nitro"
+    "team": "nitro",
+    "secret": [
+      {
+        "secret": "text",
+        "description": "🏈🏒 vers in the sports, vers top in the shorts ⛷️🏂"
+      }
+    ]
   },
   {
     "id": "rhrn",
