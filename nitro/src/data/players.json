@@ -311,7 +311,7 @@
     "name": "Matt Zak",
     "number": "11",
     "quote": "Do they not know who I think I am?",
-    "dislikes": "Any amount or form of labor, NYT Games",
+    "dislikes": "Store bought pesto ",
     "likes": "Gaming, fantasy/sci-fi, NYT Games",
     "pic": "matt-zak-pic.jpeg",
     "instagram": "https://www.instagram.com/themattzak",
@@ -511,6 +511,44 @@
     "instagram": "https://www.instagram.com/thedanielgiles",
     "position": "",
     "looking": "Playing the game I love with people I love",
+    "team": "polaris"
+  },
+  {
+    "id": "kyle",
+    "name": "Kyle McKinney",
+    "number": "20",
+    "quote": "This is 20 (x2)",
+    "dislikes": "Disrespect",
+    "likes": "Sports, travel and unique homes",
+    "pic": "kyle-pic.jpeg",
+    "instagram": "https://www.instagram.com/pupWalkLA",
+    "position": "Vers Center 😉",
+    "looking": "Trophy",
+    "team": "polaris"
+  },
+  {
+    "id": "step",
+    "name": "Stephen Hiebing",
+    "number": "12",
+    "quote": "Football is for all",
+    "dislikes": "Talking about myself",
+    "likes": "Football with the boys",
+    "pic": "stephen-pic.jpeg",
+    "position": "Quarterback",
+    "looking": "Have fun my football family",
+    "team": "polaris"
+  },
+  {
+    "id": "nico",
+    "name": "Nico",
+    "number": "91",
+    "quote": "I like long walks on the beach, fried chicken and sacking a QB",
+    "dislikes": "How much time do we have?",
+    "likes": "BBQ (Beer, Books and Queers) art, some nerdy stuff & sports",
+    "pic": "nico-pic.jpeg",
+    "position": "Numero Uno!",
+    "instagram": "https://www.instagram.com/Conejovlanco",
+    "looking": "No breaking a bone",
     "team": "polaris"
   }
 ]
