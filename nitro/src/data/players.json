@@ -377,6 +377,19 @@
     "team": "tundra"
   },
   {
+    "id": "john",
+    "name": "Sam Keltz",
+    "number": "7",
+    "quote": "Come on daddy play with me",
+    "dislikes": "Bad vibes",
+    "likes": "Taco Bell & Attention",
+    "pic": "keltz-pic.jpeg",
+    "instagram": "https://www.instagram.com/samkeltz",
+    "position": "Here",
+    "looking": "Someone else to make a decision",
+    "team": "tundra"
+  },
+  {
     "id": "cdrn",
     "name": "James In The City",
     "number": "69",
@@ -478,6 +491,19 @@
     "instagram": "https://www.instagram.com/Quinner_6",
     "position": "",
     "looking": "Cowboy Hat",
+    "team": "polaris"
+  },
+  {
+    "id": "olli",
+    "name": "Althaf",
+    "number": "8",
+    "quote": "I didn't say fucking Yee!",
+    "dislikes": "Mouthy players",
+    "likes": "Surfing and Sun!",
+    "pic": "althaf-pic.jpeg",
+    "instagram": "https://www.instagram.com/altabd28 ",
+    "position": "Slut Receiver",
+    "looking": "Tex Mex, BBQ, and some good ol competition",
     "team": "polaris"
   },
   {
