@@ -93,7 +93,13 @@
     "instagram": "https://www.instagram.com/andy.d.bee",
     "position": "HB/WR",
     "looking": "Hoping to have fun and make friends",
-    "team": "nitro"
+    "team": "nitro",
+    "secret": [
+      {
+        "secret": "text",
+        "description": "Size 👸🏻"
+      }
+    ]
   },
   {
     "id": "uefv",
@@ -455,6 +461,19 @@
     "team": "tundra"
   },
   {
+    "id": "rose",
+    "name": "Daniel Fernandes",
+    "number": "4",
+    "quote": "Kick names, and take ass.",
+    "dislikes": "Colloidal",
+    "likes": "Rosé, Costco, Octopuses",
+    "pic": "fernandes-pic.jpeg",
+    "position": "Semi supine",
+    "instagram": "https://www.instagram.com/danfurd",
+    "looking": "A green card marriage",
+    "team": "tundra"
+  },
+  {
     "id": "kitx",
     "name": "Nicholas Principe",
     "number": "24",
@@ -581,6 +600,19 @@
     "position": "Numero Uno!",
     "instagram": "https://www.instagram.com/Conejovlanco",
     "looking": "No breaking a bone",
+    "team": "polaris"
+  },
+  {
+    "id": "jixk",
+    "name": "Marc Andrew Smith",
+    "number": "37",
+    "quote": "Flags... I want em.",
+    "dislikes": "Losing",
+    "likes": "Tight D",
+    "pic": "marc-andrew-pic.jpeg",
+    "position": "Linebacker",
+    "instagram": "https://www.instagram.com/marcandrewsmith",
+    "looking": "A clue",
     "team": "polaris"
   }
 ]
